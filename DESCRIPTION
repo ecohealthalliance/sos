@@ -1,0 +1,8 @@
+Package: sos
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors: Toph Allen <allen@ecohealthalliance.org> [aut,cre]
+Description: Code for data cleaning and analysis of SoS database.
+Depends: R (>= 3.2.1)
+License: Proprietary
+LazyData: true

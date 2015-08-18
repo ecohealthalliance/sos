@@ -97,12 +97,33 @@ countries_unlist %<>%
   tokenize() %>%
   unlist() 
 
-cl <- data.frame(table(countries_unlist)[order(table(countries_unlist), decreasing = FALSE)])
+table(countries_unlist)[order(table(countries_unlist), decreasing = TRUE)]
 # There's an EU entry. The EU countries are: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and the UK.
+
+countries_unique <- unique(countries_unlist)
 
 data(country_codes)
 
-countries_unique
+# These are the countries that match more than one "officialname":
+lapply(countries_unique, grep, tolower(country_codes$officialname)) %>%
+  sapply(length) %>%
+  sapply(`>`, 1) %>%
+  countries_unique[.]
+
+# However, I don't think this solves all of our problems.
+# For instance, "uk" won't match "United Kingdom; it'll match "Ukraine".
+
+# These are the countries that match zero "officialname" entries:
+lapply(countries_unique, grep, tolower(country_codes$officialname)) %>%
+  sapply(length) %>%
+  sapply(`==`, 0) %>%
+  countries_unique[.]
+
+
+
+
+
+
 
 countries %<>%
   tolower() %>%

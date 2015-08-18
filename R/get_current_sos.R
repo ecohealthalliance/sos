@@ -6,10 +6,11 @@ get_current_sos <- function(assign = TRUE) {
 
   sos_url <- "https://docs.google.com/spreadsheets/d/12KBoYMgqCc14WlE0JYyZLbo907f2SBPlEGgajF2j7GI/pub?gid=0&single=true&output=csv"
   date_str <- format(Sys.time(), "%Y-%m-%d-%H%M%S")
-  cache_path <- system.file("inst/cache", package = "sos")
+  sos_versions_path <- system.file("inst/sos_versions", package = "sos")
+  rawdata_path <- system.file("inst/rawdata", package = "sos")
   dest_name <- paste0("sos_", date_str, ".csv")
-  dest_file <- file.path(cache_path, dest_name)
-  latest_file <- file.path(cache_path, "sos_latest.csv")
+  dest_file <- file.path(sos_versions_path, dest_name)
+  latest_file <- file.path(rawdata_path, "sos_latest.csv")
   sos_temp <- tempfile()
 
   if (!file.exists(latest_file)) {

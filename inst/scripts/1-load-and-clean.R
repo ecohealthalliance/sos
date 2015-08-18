@@ -41,7 +41,7 @@ entity_type_chr %<>%
   lapply(paste0, collapse = ", ") %>%
   unlist()
 
-entity_type_chr <- data.frame(sosid, entity_type_chr)
+entity_type_chr <- data.frame(sosid, entity_type_chr, stringsAsFactors = FALSE)
 
 
 # Active status (This first type isn't necesary because there's only one per col)
@@ -66,7 +66,7 @@ active_status_chr %<>%
   lapply(paste0, collapse = ", ") %>%
   unlist()
 
-active_status_chr <- data.frame(sosid, active_status_chr)
+active_status_chr <- data.frame(sosid, active_status_chr, stringsAsFactors = FALSE)
 
 
 
@@ -95,10 +95,14 @@ countries_unlist <- countries
 countries_unlist %<>%
   tolower() %>%
   tokenize() %>%
-  unlist()
+  unlist() 
 
-table(countries_unlist)[order(table(countries_unlist), decreasing = TRUE)]
+cl <- data.frame(table(countries_unlist)[order(table(countries_unlist), decreasing = FALSE)])
 # There's an EU entry. The EU countries are: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and the UK.
+
+data(country_codes)
+
+countries_unique
 
 countries %<>%
   tolower() %>%

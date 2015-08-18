@@ -11,3 +11,6 @@ vignettes/*.html
 vignettes/*.pdf
 .Rproj.user
 .RData
+
+# Directories with non-trackable files
+inst/out/

@@ -14,5 +14,5 @@ vignettes/*.pdf
 *.RData
 
 # Directories with non-trackable files
-inst/out/*
+inst/out/
 inst/sos_versions/

@@ -85,53 +85,51 @@ date_terminated <- parse_date_time(date_terminated, orders = c("y", "mdy"))
 date_terminated <- data.frame(sosid, date_terminated_raw, date_terminated)
 
 
-# To do: Region / Countries, Data Type / Syndromic Surveillance / that sort of thing.
+# To do: Data Type / Syndromic Surveillance / that sort of thing.
+
 
 # Countries
-countries <- sos$Countries
 
-countries_unlist <- countries
 
-countries_unlist %<>%
+countries_raw <- sos$Countries %>%
   tolower() %>%
-  tokenize() %>%
-  unlist() 
+  tokenize(split_and = FALSE)
 
-table(countries_unlist)[order(table(countries_unlist), decreasing = TRUE)]
-# There's an EU entry. The EU countries are: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and the UK.
-
-countries_unique <- unique(countries_unlist)
-
-data(country_codes)
-
-# These are the countries that match more than one "officialname":
-lapply(countries_unique, grep, tolower(country_codes$officialname)) %>%
-  sapply(length) %>%
-  sapply(`>`, 1) %>%
-  countries_unique[.]
-
-# However, I don't think this solves all of our problems.
-# For instance, "uk" won't match "United Kingdom; it'll match "Ukraine".
-
-# These are the countries that match zero "officialname" entries:
-lapply(countries_unique, grep, tolower(country_codes$officialname)) %>%
-  sapply(length) %>%
-  sapply(`==`, 0) %>%
-  countries_unique[.]
+names(countries_raw) <- sosid
 
 
+# Pre-processing notes
+# Change 'nf', as it matches "switzerland"
 
+sos_countries <- list()
 
+for (i in seq_along(countries_raw)) { # I should consider making this a function for llply.
+  x <- countries_raw[[i]]
+  
+  if (length(x) < 1) {
+    warning("Empty string for match.")
+    next
+  }
+  
+  matches <- lapply(x, match_country, first_only = TRUE, include_search = TRUE)
+  matches <- do.call(rbind, matches)
+  
+  if (is.null(matches)) {
+    warning("No matches found.")
+    next
+  }
+  
+  matches$sosid <- sosid[i]
+  sos_countries[[i]] <- matches
+}
 
+# Clean up.
+rm(x)
+rm(i)
+rm(countries_raw)
+rm(matches)
 
+sos_countries <- do.call(rbind, sos_countries)
 
-countries %<>%
-  tolower() %>%
-  tokenize() %>%
-  lapply(character_vector_to_logical_matrix) %>%
-  rbind.fill()
-
-countries[is.na(countries)] <- FALSE
-
-countries <- cbind(sosid, countries)
-
+iso3 <- sos_countries %>%
+  select(sosid, iso3)

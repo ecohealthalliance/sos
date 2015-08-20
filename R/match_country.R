@@ -6,7 +6,8 @@ match_country <- function(x, first_only = FALSE, include_search = FALSE) {
   rows <- list(official_rows, short_rows)
   
   score <- function(x) {
-    as.numeric(dist(c(1, length(x))))
+    y <- length(x)
+    1/y + y
   }
   
   scores <- function(x) {

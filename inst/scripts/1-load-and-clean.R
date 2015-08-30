@@ -85,11 +85,7 @@ date_terminated <- parse_date_time(date_terminated, orders = c("y", "mdy"))
 date_terminated <- data.frame(sosid, date_terminated_raw, date_terminated)
 
 
-# To do: Data Type / Syndromic Surveillance / that sort of thing.
-
-
 # Countries
-
 
 countries_raw <- sos$Countries %>%
   tolower() %>%
@@ -133,3 +129,66 @@ sos_countries <- do.call(rbind, sos_countries)
 
 iso3 <- sos_countries %>%
   select(sosid, iso3)
+
+# To do: Data Type / Syndromic Surveillance / that sort of thing.
+# N.B. Don't worry about "Web Activity Surveillance" as it's a mess.
+
+# Syndromic
+
+syndromic <- sos$Syndromic.Surveillance
+
+syndromic[grep("yes", syndromic, ignore.case = TRUE)] <- "yes"
+syndromic[grep("no", syndromic, ignore.case = TRUE)] <- "no"
+syndromic[grep("nf", syndromic, ignore.case = TRUE)] <- "nf"
+syndromic[!syndromic %in% c("yes", "no", "nf")] <- "blank"
+
+syndromic <- data.frame(sosid, syndromic)
+
+
+# Humans
+
+humans <- sos$Humans
+
+table(humans)
+
+humans[grep("yes", humans, ignore.case = TRUE)] <- "yes"
+humans[grep("no", humans, ignore.case = TRUE)] <- "no"
+humans[grep("nf", humans, ignore.case = TRUE)] <- "nf"
+humans[!humans %in% c("yes", "no", "nf")] <- "blank"
+
+table(humans)
+
+humans <- data.frame(sosid, humans)
+
+
+# Animals
+
+animals <- sos$Animals
+
+table(animals)
+
+animals[grep("yes", animals, ignore.case = TRUE)] <- "yes"
+animals[grep("no", animals, ignore.case = TRUE)] <- "no"
+animals[grep("nf", animals, ignore.case = TRUE)] <- "nf"
+animals[!animals %in% c("yes", "no", "nf")] <- "blank"
+
+table(animals)
+
+animals <- data.frame(sosid, animals)
+
+
+# Plants
+
+plants <- sos$Plants
+
+table(plants)
+
+plants[grep("yes", plants, ignore.case = TRUE)] <- "yes"
+plants[grep("no", plants, ignore.case = TRUE)] <- "no"
+plants[grep("nf", plants, ignore.case = TRUE)] <- "nf"
+plants[!plants %in% c("yes", "no", "nf")] <- "blank"
+
+table(plants)
+
+plants <- data.frame(sosid, plants)
+

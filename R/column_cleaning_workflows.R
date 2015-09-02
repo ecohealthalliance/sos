@@ -4,21 +4,61 @@ clean_name <- function(sos_raw) {
   return(name)
 }
 
-
-clean_entity_type <- function(sos_raw) {
+# The option determines whether we return a dataframe/matrix with true/false
+# values, or a factor of all possible combinations.
+clean_entity_type <- function(sos_raw, return_type = "data.frame") {
   require(plyr); require(dplyr)
-
-  entity_type <- sos_raw$NP..non.profit..FP..for.profit..Gov..Government.
-
-  entity_type %<>%
-    tolower() %>%
-    tokenize() %>%
-    lapply(vector_to_matrix) %>%
-    rbind.fill()
-
-  entity_type[is.na(entity_type)] <- FALSE
-
-  return(entity_type)
+  
+  entity_type <- sos_raw$NP..non.profit..FP..for.profit..Gov..Government.  
+  
+  if (return_type == "data.frame") {
+    entity_type %<>%
+      tolower() %>%
+      tokenize() %>%
+      lapply(vector_to_matrix) %>%
+      rbind.fill()
+    
+    entity_type[is.na(entity_type)] <- FALSE
+    
+    return(entity_type)
+  } else if (return_type %in% c("character", "factor")) {
+    entity_type %<>%
+      tolower() %>%
+      tokenize() %>% # What we do here is split everything up and recombine it.
+      lapply(., function(x) {
+        if (length(x) == 0) x <- "nf"
+        x[!x %in% c("fp", "np", "gov")] <- "nf" # Remove incorrect things with "nf".
+        x <- unique(x) # Remove duplicates, for things like "gov, gov".
+        x <- x[order(x)] # Arrange alphabetically, for things like "np, gov" and "gov, np"
+      }) %>%
+      lapply(paste0, collapse = ", ") %>%
+      unlist()
+    
+    if (return_type == "character") return(entity_type)
+    
+    entity_levels = c("gov", 
+                      "fp",
+                      "np",
+                      "gov, np",
+                      "fp, gov",
+                      "fp, np",
+                      "fp, gov, np",
+                      "nf")
+    
+#     entity_labels = c("Government",
+#                       "For-profit", 
+#                       "Non-profit", 
+#                       "Government, Non-profit", 
+#                       "Government, For-profit", 
+#                       "For-profit, Non-profit", 
+#                       "Non-profit, Government", 
+#                       "Government, Government", 
+#                       "For-profit, Government", 
+#                       "Government, Non-profit, For-profit")
+    
+    entity_type %<>% factor(levels = entity_levels)
+    return(entity_type)
+  }
 }
 
 

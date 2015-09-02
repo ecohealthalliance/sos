@@ -16,3 +16,5 @@ vignettes/*.pdf
 # Directories with non-trackable files
 inst/out/
 inst/sos_versions/
+inst/scripts/*.html
+inst/scripts/*.pdf

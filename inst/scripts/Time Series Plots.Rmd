@@ -148,5 +148,59 @@ ggplot(time_series_entity, aes(x = year, y = number_active, fill = entity_type, 
 ```
 
 
+## Date Created
+
+```{r date-created}
+library(reshape2)
+qplot(year(sos_dates$date_created), binwidth = 1)
+qplot(year(sos_dates$date_terminated), binwidth = 1)
+
+date_hist <- data.frame(sosid, select(sos_dates, date_created, date_terminated)) %>%
+  melt(id.vars = "sosid") %>%
+  mutate(year = year(value)) %>%
+  filter(year != 2015, year >= 1950)
+
+ggplot() +
+  geom_histogram(data = filter(date_hist, variable == "date_created"),
+                 mapping = aes(x = year, y = ..count.., fill = "Created"), binwidth = 1) +
+  geom_histogram(data = filter(date_hist, variable == "date_terminated"),
+                 mapping = aes(x = year, y = -..count.., fill = "Terminated"), binwidth = 1) +
+  scale_fill_hue("Group") + theme_bw() +
+  labs(x = "Year", y = "Number of Surveillance Systems", title = "Number of Surveillance Systems Created and Terminated")
+# ggsave(file = "inst/out/Number of Surveillance Systems Created and Terminated.pdf", width = 6.5, height = 4.5)
+# ggsave(file = "inst/out/Number of Surveillance Systems Created and Terminated.png", width = 6.5, height = 4.5)
+
+date_hist2 <- date_hist %>%
+  group_by(year, variable) %>%
+  summarize(count = n()) %>%
+  dcast(year ~ variable)
+
+years_not_in_df <- seq(1950, 2014)[!seq(1950, 2014) %in% date_hist2$year]
+
+date_hist2 <- rbind(date_hist2, data.frame(year = years_not_in_df, date_created = NA, date_terminated = NA))
+  
+date_hist2[is.na(date_hist2)] <- 0
+
+ggplot(data = date_hist2, aes(x = year)) +
+  geom_bar(aes(y = date_created), stat = "identity", fill = "#F8766D") +
+  geom_bar(aes(y = -date_terminated), stat = "identity", fill = "#00BFC4") +
+  geom_line(aes(y = date_created - date_terminated), size = 0.5) +
+  theme_bw() +
+  labs(x = "Year", y = "Number of Surveillance Systems", title = "Number of Surveillance Systems Created and Terminated")
+# ggsave(file = "inst/out/Number of Surveillance Systems Created and Terminated (with over-under line).pdf", width = 6.5, height = 4.5)
+# ggsave(file = "inst/out/Number of Surveillance Systems Created and Terminated (with over-under line).png", width = 6.5, height = 4.5)
+
+
+
+ggplot() +
+  geom_histogram(data = filter(date_hist, variable == "date_created"),
+                 mapping = aes(x = year, y = ..count.., fill = "Created"), binwidth = 1) +
+  geom_histogram(data = filter(date_hist, variable == "date_terminated"),
+                 mapping = aes(x = year, y = -..count.., fill = "Terminated"), binwidth = 1) +
+  geom_line(data = time_series, mapping = aes(x = year(year), y = number_active)) +
+  scale_fill_hue("Group") + theme_bw() +
+  labs(x = "Year", y = "Number of Surveillance Systems", title = "Number of Surveillance Systems Created and Terminated")
+
+```
 
 

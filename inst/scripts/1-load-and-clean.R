@@ -22,3 +22,9 @@ syndromic <- clean_syndromic(sos_raw)
 humans <- clean_humans(sos_raw)
 animals <- clean_animals(sos_raw)
 plants <- clean_plants(sos_raw)
+
+sos_cleaned <- data.frame(sosid, name, entity_type, status, date_created, date_terminated, humans, animals, plants, syndromic)
+sos_countries <- data.frame(sosid, countries)
+
+write.csv(sos_cleaned, file = "inst/out/sos_cleaned.csv")
+write.csv(sos_countries, file = "inst/out/sos_countries.csv")

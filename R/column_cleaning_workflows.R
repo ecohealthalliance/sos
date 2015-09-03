@@ -15,6 +15,12 @@ clean_entity_type <- function(sos_raw, return_type = "data.frame") {
     entity_type %<>%
       tolower() %>%
       tokenize() %>%
+      lapply(., function(x) {
+        if (length(x) == 0) x <- "nf"
+        x[!x %in% c("fp", "np", "gov")] <- "nf" # Remove incorrect things with "nf".
+        x <- unique(x) # Remove duplicates, for things like "gov, gov".
+        x <- x[order(x)] # Arrange alphabetically, for things like "np, gov" and "gov, np"
+      }) %>%
       lapply(vector_to_matrix) %>%
       rbind.fill()
     

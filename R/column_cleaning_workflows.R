@@ -1,6 +1,6 @@
 clean_name <- function(sos_raw) {
   name <- sos_raw$Disease.Surveillance.Database
-  name <-strip_whitespace(name)
+  name <- strip_whitespace(name)
   return(name)
 }
 

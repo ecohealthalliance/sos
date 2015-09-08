@@ -26,5 +26,5 @@ plants <- clean_plants(sos_raw)
 sos_cleaned <- data.frame(sosid, name, entity_type, status, date_created, date_terminated, humans, animals, plants, syndromic)
 sos_countries <- data.frame(sosid, countries)
 
-write.csv(sos_cleaned, file = "inst/out/sos_cleaned.csv")
-write.csv(sos_countries, file = "inst/out/sos_countries.csv")
+write.csv(sos_cleaned, file = "inst/out/sos_cleaned.csv", row.names = FALSE)
+write.csv(sos_countries, file = "inst/out/sos_countries.csv", row.names = FALSE)

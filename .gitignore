@@ -18,3 +18,4 @@ inst/out/
 inst/sos_versions/
 inst/scripts/*.html
 inst/scripts/*.pdf
+inst/scripts/*.docx

@@ -43,26 +43,24 @@ clean_entity_type <- function(sos_raw, return_type = "data.frame") {
     if (return_type == "character") return(entity_type)
     
     entity_levels = c("gov", 
-                      "fp",
                       "np",
+                      "fp",
                       "gov, np",
                       "fp, gov",
                       "fp, np",
                       "fp, gov, np",
                       "nf")
     
-#     entity_labels = c("Government",
-#                       "For-profit", 
-#                       "Non-profit", 
-#                       "Government, Non-profit", 
-#                       "Government, For-profit", 
-#                       "For-profit, Non-profit", 
-#                       "Non-profit, Government", 
-#                       "Government, Government", 
-#                       "For-profit, Government", 
-#                       "Government, Non-profit, For-profit")
+    entity_labels = c("Government",
+                      "Non-profit", 
+                      "For-profit", 
+                      "Government,\nNon-profit", 
+                      "Government,\nFor-profit", 
+                      "Non-profit,\nFor-profit", 
+                      "Government,\nNon-profit,\nFor-profit",
+                      "Not found")
     
-    entity_type %<>% factor(levels = entity_levels)
+    entity_type %<>% factor(levels = entity_levels, labels = entity_labels)
     return(entity_type)
   }
 }

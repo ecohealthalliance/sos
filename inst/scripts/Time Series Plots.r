@@ -1,22 +1,7 @@
----
-title: "Time Series Plots"
-author: "Toph Allen"
-date: "September 2, 2015"
-output: html_document
----
-
-## Loading and cleaning data
-
-This file contains time-series plots from the SoS database.
-
-First, we load the SoS database and process the date columns.
-
-```{r knitr-setup}
+## ----knitr-setup---------------------------------------------------------
 # knitr::opts_chunk$set(message = FALSE)
-```
 
-
-```{r setup, message = FALSE}
+## ----setup, message = FALSE----------------------------------------------
 library(plyr)
 library(dplyr)
 library(magrittr)
@@ -33,22 +18,12 @@ sosid <- paste0("SOS", 1:nrow(sos_raw))
 
 date_created <- clean_date_created(sos_raw)
 date_terminated <- clean_date_terminated(sos_raw)
-```
 
-## Processing data
-
-Next, we create a data frame and use the `lubridate` package to create an interval entity_type for each system.
-
-```{r create-interval}
+## ----create-interval-----------------------------------------------------
 sos_dates <- data.frame(date_created, date_terminated)
 sos_dates$active_interval <- new_interval(sos_dates$date_created, sos_dates$date_terminated)
-```
 
-We then create a *separate* data frame with a column of every year from 1900 to present day. Using that column, we create another column, where, for each year, we sum the number of surveillance systems whose interval encompasses that year.
-
-I wrote a short function that takes as its arguments a year and a vector of `lubridate` intervals, and returns the number of years that fall within those intervals.
-
-```{r create-time-series}
+## ----create-time-series--------------------------------------------------
 sum_active_systems_for_year <- function(year, intervals) {
   sum(year %within% intervals, na.rm = TRUE)
 }
@@ -64,13 +39,8 @@ time_series$number_active <- sapply(time_series$year,
 #   group_by(year) %>%
 #   mutate(number_active = sum(year %within% sos_dates$active_interval, na.rm = TRUE)) %>%
 #   ungroup()
-```
 
-## Plots
-
-We can then plot this.
-
-```{r initial-plots}
+## ----initial-plots-------------------------------------------------------
 # Quick-and-dirty qplot.
 qplot(x = year, y = number_active, data = time_series, geom = "line")
 
@@ -80,15 +50,7 @@ ggplot(time_series, aes(x = year, y = number_active)) + geom_line() + theme_bw()
 # With number of systems on a log scale.
 ggplot(time_series, aes(x = year, y = number_active)) + geom_line() + theme_bw() + labs(x = "Year", y = "Count of Active Systems (log scale)", title = "Number of Active Surveillance Systems over Time") + scale_y_log10()
 
-```
-
-## Splitting by Other Variables
-
-First we're going to split and color the plot by entity type.
-
-This is fucking annoying, as you have to iterate over the levels of `entity_type` and the values of `year`.
-
-```{r entity-type}
+## ----entity-type---------------------------------------------------------
 sos_dates$entity_type <- clean_entity_type(sos_raw, return_type = "factor")
 
 time_series_entity <- expand.grid(year = time_series$year, entity_type = levels(sos_dates$entity_type))
@@ -99,10 +61,8 @@ time_series_entity %<>%
                                                      sos_dates[sos_dates$entity_type == entity_type,
                                                                "active_interval"])) %>%
   ungroup()
-  
-```
 
-```{r time-series-by-entity-type}
+## ----time-series-by-entity-type------------------------------------------
 ggplot(time_series_entity, aes(x = year, y = number_active, fill = entity_type, color = entity_type, order = desc(entity_type))) + 
   geom_area() +
   theme_bw() +
@@ -147,12 +107,8 @@ ggplot(time_series_entity, aes(x = year, y = number_active, fill = entity_type, 
 
 
 
-```
 
-
-## Date Created
-
-```{r date-created}
+## ----date-created--------------------------------------------------------
 library(reshape2)
 qplot(year(sos_dates$date_created), binwidth = 1)
 qplot(year(sos_dates$date_terminated), binwidth = 1)
@@ -202,7 +158,5 @@ ggplot() +
   geom_line(data = time_series, mapping = aes(x = year(year), y = number_active)) +
   scale_fill_hue("Group") + theme_bw() +
   labs(x = "Year", y = "Number of Surveillance Systems", title = "Number of Surveillance Systems Created and Terminated")
-
-```
 
 

@@ -97,4 +97,3 @@ spplot(sos_map, zcol = "log_population")
 sos_map$log_systems_per_capita <- log(sos_map$systems_per_capita)
 spplot(sos_map, zcol = "log_systems_per_capita")
 ```
-

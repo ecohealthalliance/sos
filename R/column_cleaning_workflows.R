@@ -90,8 +90,10 @@ clean_date_created <- function(sos_raw) {
 clean_date_terminated <- function(sos_raw) {
   require(lubridate)
   date_terminated <- tolower(sos_raw$Date.Terminated..C.if.current.)
+  current <- grepl("c", date_terminated)
   date_terminated[grep("c", date_terminated)] <- format(Sys.time(), "%Y")
-  parse_date_time(date_terminated, orders = c("y", "mdy"))
+  date_terminated <- parse_date_time(date_terminated, orders = c("y", "mdy"))
+  return(data.frame(date_terminated, current))
 }
 
 

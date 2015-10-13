@@ -1,19 +1,9 @@
----
-title: "Results"
-author: "Toph Allen"
-date: "September 8, 2015"
-output: html_document
----
-
-
-```{r knitr-setup, echo = FALSE}
+## ----knitr-setup, echo = FALSE-------------------------------------------
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE)
-```
 
-
-```{r load-packages, message = FALSE, warning = FALSE}
+## ----load-packages, message = FALSE, warning = FALSE---------------------
 library(plyr)
 library(dplyr)
 library(magrittr)
@@ -22,17 +12,15 @@ library(ggplot2)
 library(devtools)
 
 load_all()
-```
 
-```{r update-load-raw-data}
+## ----update-load-raw-data------------------------------------------------
 get_current_sos()
 import_country_codes()
 data(sos_raw)
 sosid <- paste0("SOS", 1:nrow(sos_raw))
 
-```
 
-```{r clean-data}
+## ----clean-data----------------------------------------------------------
 name <- clean_name(sos_raw)
 
 status <- clean_status(sos_raw)
@@ -40,9 +28,8 @@ date_created <- clean_date_created(sos_raw)
 date_terminated <- clean_date_terminated(sos_raw)
 countries <- clean_countries(sos_raw)
 
-```
 
-```{r survclass-calculations}
+## ----survclass-calculations----------------------------------------------
 humans <- clean_humans(sos_raw)
 animals <- clean_animals(sos_raw)
 plants <- clean_plants(sos_raw)
@@ -75,26 +62,21 @@ sos_surveillance_class %<>%
                          levels = c("yes", "no", "nf"),
                          labels = c("Yes", "No", "Not found"),
                          ordered = TRUE))
-```
 
-```{r entity-calculations}
+## ----entity-calculations-------------------------------------------------
 entity_df <- clean_entity_type(sos_raw, return_type = "data.frame")
 entity_factor <- clean_entity_type(sos_raw, return_type = "factor")
 
 sos_entity <- data.frame(sosid, entity_df, entity_factor)
 
-```
 
-The final database contains information on `r nrow(sos_raw)` biosurveillance systems. Of these, `r sum(sos_surveillance_class$humans == "Yes")` study humans, `r sum(sos_surveillance_class$animals == "Yes")` study animals, and `r sum(sos_surveillance_class$plants == "Yes")` study plants. We found `r sum(sos_surveillance_class$syndromic == "Yes")` systems which conduct syndromic surveillance and `r sum(sos_surveillance_class$syndromic == "No")` which did not, but were unable to find syndromic surveillance information for `r sum(sos_surveillance_class$syndromic == "Not found")` systems. Government entities were involved in `r sum(sos_entity$gov)` surveillance systems, non-profits in `r sum(sos_entity$np)`, and for-profits in `r sum(sos_entity$fp)`. More than one of these entity types were involved in `r sum(apply(sos_entity[2:4], 1, function(x) sum(x) > 1))` systems.
-
-```{r survclass-table}
+## ----survclass-table-----------------------------------------------------
 knitr::kable(summary(sos_surveillance_class[2:5]),
              col.names = c("Humans", "Animals", "Plants", "Syndromic"),
              caption = "Table 1. Classes of biosurveillance conducted. Note: for \"Syndromic\" variable, \"Blank\" and \"Not Found\" entries were combined.")
 
-```
 
-```{r table-summary}
+## ----table-summary-------------------------------------------------------
 library(reshape2)
 ggsurvclass <- sos_surveillance_class %>%
   melt(id.vars = "sosid") %>%
@@ -104,18 +86,16 @@ ggsurvclass <- sos_surveillance_class %>%
 
 ggsurvclass + geom_bar(aes(x = value, stat = "bin"), position = "dodge") + facet_grid(. ~ variable) + theme_bw() + labs(x = NULL, y = "Number of Systems", title = "Types of Biosurveillance Conducted")
 
-```
 
-```{r entity-plot}
+## ----entity-plot---------------------------------------------------------
 ggentity <- sos_entity %>%
   select(sosid, entity_factor) %>%
   ggplot()
   
 ggentity + geom_bar(aes(x = entity_factor, stat = "bin"), position = "dodge") + theme_bw() + labs(x = "Classes of entity", y = "Number of Systems", title = "Types of entities conducting biosurviellance")
 
-```
 
-```{r time-series}
+## ----time-series---------------------------------------------------------
 sos_dates <- data.frame(date_created, date_terminated)
 sos_dates$active_interval <- new_interval(sos_dates$date_created, sos_dates$date_terminated)
 
@@ -156,11 +136,8 @@ most_systems_year <- time_series %>%
   select(year) %>%
   mutate(year = year(year)) # Convert the "year" variable to a "year" from a full "date."
 
-```
 
-We examined data collected on surveillance system termination and creation. Of the `r nrow(sos_raw)` surveillance systems in the database, `r sum(!is.na(sos_dates$active_interval))` have information on both year of creation and, unless currently active, year of termination. Surveillance system creation peaked in `r max_creation`, tailing off in subsequent years. Termination of active systems increased significantly after 2000, peaking in `r max_termination`. Accounting for system creation and termination, the largest concurrent number of active surveillance systems was `r max(time_series$number_active)`, occurring in `r most_systems_year`.
-
-```{r date_hist-plot}
+## ----date_hist-plot------------------------------------------------------
 ggplot(data = date_hist, aes(x = year)) +
   geom_bar(aes(y = date_created), stat = "identity", fill = "#F8766D") +
   geom_bar(aes(y = -date_terminated), stat = "identity", fill = "#00BFC4") +
@@ -168,15 +145,12 @@ ggplot(data = date_hist, aes(x = year)) +
   theme_bw() +
   labs(x = "Year", y = "Number of Surveillance Systems", title = "Number of Surveillance Systems Created and Terminated")
 
-```
 
-```{r time-series-plots}
+## ----time-series-plots---------------------------------------------------
 ggplot(time_series, aes(x = year, y = number_active)) + geom_line() + theme_bw() + labs(x = "Year", y = "Count of Active Systems", title = "Number of Active Surveillance Systems over Time")
 
-```
 
-
-```{r lifespan-plot}
+## ----lifespan-plot-------------------------------------------------------
 active_period <- as.period(sos_dates$active_interval, unit = "years")
 active_duration <- as.duration(sos_dates$active_interval)
 
@@ -193,23 +167,8 @@ ggplot(sos_dates, aes(x = pmin(sos_dates$years_active, 50), fill = current)) +
   labs(x = "Years Active", y = "Count", title = "Lifespan of Biosurveillance Systems") +
   theme_bw()
 
-ggplot(sos_dates, aes(x = pmin(sos_dates$years_active, 50), fill = current)) +
-  layer(geom = "bar",
-        stat = "bin",
-        width=.1,
-        breaks = seq(0, 50, by = 5),
-        position = position_dodge(width = 4),
-        alpha = 0.9) +
-  guides(fill = guide_legend(title = "Currently Active")) +
-  scale_x_continuous(labels = c(seq(0, 40, by = 10), ">50")) +
-  labs(x = "Years Active", y = "Count", title = "Lifespan of Biosurveillance Systems") +
-  theme_bw()
 
-```
-
-
-
-```{r time-series-by-entity-type}
+## ----time-series-by-entity-type------------------------------------------
 sos_dates$entity_type <- clean_entity_type(sos_raw, return_type = "factor")
 time_series_entity <- expand.grid(year = time_series$year, entity_type = levels(sos_dates$entity_type))
 time_series_entity %<>%
@@ -226,33 +185,17 @@ ggplot(time_series_entity, aes(x = year, y = number_active, fill = entity_type, 
   theme_bw() +
   labs(x = "Year", y = "Count of Active Systems", title = "Active Surveillance Systems by Entity Class")
 
-```
 
-
-
-
-
-
-```{r max-systems-in-country}
+## ----countries-----------------------------------------------------------
 max_systems_in_country <- countries %>%
   summarise_each(funs = funs(sum)) %>%
   max()
 
-```
 
-The United States was covered by the largest number of surveillane systems (`r max_systems_in_country`). However, the number of surveillance systems per country is not by itself a meaningful measure of surveillance effort, as the United States also covers a larger area and a larger population than many other countries. Plotting the number of surveillance systems per capita for each country shows a different aspect of surveillance system distribution.
-
-```{r subset-countries}
-countries_current <- countries[sos_dates$current, ]
-
-
-```
-
-
-```{r country-population}
+## ----country-population--------------------------------------------------
 library(curl)
 
-by_country <- countries_current %>%
+by_country <- countries %>%
   summarise_each(funs(n = sum(as.numeric(.)))) %>%
   t() %>% # Transpose it so that countries are rows.
   as.data.frame() %>%
@@ -269,11 +212,9 @@ population %<>%
 by_country %<>%
   left_join(population) %>%
   mutate(systems_per_capita = n_systems / population)
-```
 
-```{r maps}
+## ----maps----------------------------------------------------------------
 library(rworldmap)
-library(RColorBrewer)
 
 sos_map <- joinCountryData2Map(dF = by_country, joinCode = "ISO3", nameJoinColumn = "iso3", verbose = FALSE)
 
@@ -283,11 +224,4 @@ spplot(sos_map, zcol = "log_n_systems", main = "Count of Surveillance Systems")
 sos_map$log_systems_per_capita <- log(sos_map$systems_per_capita)
 spplot(sos_map, zcol = "log_systems_per_capita", main = "Surveillance Systems Per Capita")
 
-sos_map$systems_per_10000 <- sos_map$systems_per_capita * 10000
-foo <- levels(cut(sos_map$systems_per_10000, breaks = pretty(sos_map$systems_per_10000)))
-sos_map$systems_pretty <- cut(log(sos_map$systems_per_10000),
-                              breaks = pretty(log(sos_map$systems_per_10000)),
-                              labels = foo)
-spplot(sos_map, zcol = "systems_pretty", col.regions = rev(brewer.pal(6, "YlGnBu")), main = "Surveillance Systems Per 10,000 People")
 
-```

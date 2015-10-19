@@ -11,7 +11,7 @@ sos_dates %<>%
 xlabs <- c(seq(0, 40, by = 10), ">50")
 
 ggplot(sos_dates, aes(x = pmin(sos_dates$years_active, 50), fill = current)) +
-  layer(geom = "bar", stat = "bin", breaks = seq(0, 50)) +
+  layer(geom = "bar", stat = "bin", breaks = seq(0, 50), position = "identity", alpha = 0.75) +
   scale_x_continuous(labels = c(seq(0, 40, by = 10), ">50")) +
   labs(x = "Years Active", y = "Count", title = "Lifespan of Biosurveillance Systems") +
   theme_bw()
@@ -38,7 +38,6 @@ ggplot(sos_dates, aes(x = pmin(sos_dates$years_active, 50), fill = current)) +
         breaks = seq(0, 50, by = 5),
         position = position_dodge(width = 4),
         alpha = 0.9) +
-  guides(fill = guide_legend(title = "Currently Active")) +
   scale_x_continuous(labels = c(seq(0, 40, by = 10), ">50")) +
   labs(x = "Years Active", y = "Count", title = "Lifespan of Biosurveillance Systems") +
   theme_bw()

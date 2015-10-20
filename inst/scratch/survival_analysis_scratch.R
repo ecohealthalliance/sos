@@ -69,3 +69,5 @@ summary(sos_surv_humans)
 # Fit a cox proportional hazard model
 
 sos_cox <- coxph(formula = Surv(time, as.numeric(terminated)) ~ gov + np + fp + humans + animals + plants + syndromic, data = sos)
+
+View(sos)

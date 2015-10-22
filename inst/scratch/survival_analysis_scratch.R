@@ -64,10 +64,22 @@ ggsurv(sos_surv_humans, CI = T) + xlim(0, 50)
 sos_surv_humans
 summary(sos_surv_humans)
 
-
-
 # Fit a cox proportional hazard model
 
 sos_cox <- coxph(formula = Surv(time, as.numeric(terminated)) ~ gov + np + fp + humans + animals + plants + syndromic, data = sos)
 
-View(sos)
+# Transform the data
+
+yn_as_logical <- function(x) {
+  if (!is.logical(x)) x <- as.logical(revalue(x, replace = c(no = FALSE, yes = TRUE)))
+  return(x)fo
+}
+
+sos %<>%
+  mutate(
+    humans = yn_as_logical(humans),
+    animals = yn_as_logical(animals),
+    plants = yn_as_logical(plants),
+    syndromic = yn_as_logical(syndromic)
+  )
+

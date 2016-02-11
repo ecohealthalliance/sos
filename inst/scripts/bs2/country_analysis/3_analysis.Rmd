@@ -1,0 +1,394 @@
+---
+title: "BS2 Country-Level Analysis"
+author: "Toph Allen"
+date: "September 8, 2015"
+output: html_document
+---
+
+
+```{r knitr-setup, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = TRUE,
+                      warning = TRUE)
+```
+
+
+```{r setup}
+library(rworldmap)
+library(plyr)
+library(dplyr)
+library(purrr)
+library(magrittr)
+library(ggplot2)
+library(GGally)
+library(devtools)
+library(viridis)
+
+load_all()
+
+data(country_data)
+country_data <- country_data[!is.na(country_data$systems_per_cap), ]
+country_data <- na.omit(country_data)
+
+data_map <- joinCountryData2Map(dF = country_data, joinCode = "ISO3", nameJoinColumn = "iso3", verbose = FALSE)
+
+```
+
+## Maps and descriptions of variables
+
+I merged various country-level datasets to get a data frame with the following columns.
+
+<!-- ```{r prettify}
+prettify <- function(x) cut(x, breaks = exp(pretty(log(x))), dig.lab = 2)
+
+pretty_data <- country_data
+
+pretty_data %<>%
+  mutate_each(funs(prettify), -iso3)
+
+data_map <- joinCountryData2Map(dF = pretty_data, joinCode = "ISO3", nameJoinColumn = "iso3", verbose = FALSE)
+``` -->
+
+
+
+### 3-letter country-code (`iso3`)
+
+[A map doesn't make sense for this variable.]
+
+
+### DALYs lost to all causes (`daly_all`)
+
+```{r}
+spplot(data_map, zcol = "daly_all",
+       col.regions = viridis(100),
+       main = "Dalys Lost To All Causes")
+```
+
+
+### DALYs lost to communicable diseases (`daly_comm`)
+
+```{r}
+spplot(data_map, zcol = "daly_comm",
+       col.regions = viridis(100),
+       main = "Dalys Lost To Communicable Diseases")
+```
+
+
+### deaths from all causes (`death_all`)
+
+```{r}
+spplot(data_map, zcol = "death_all",
+       col.regions = viridis(100),
+       main = "Deaths From All Causes")
+```
+
+
+### deaths from communicable diseases (`death_comm`)
+
+```{r}
+spplot(data_map, zcol = "death_comm",
+       col.regions = viridis(100),
+       main = "Deaths From Communicable Diseases")
+```
+
+
+### number of different diseases recorded in that country, per GIDEON (`diseases`)
+
+```{r}
+spplot(data_map, zcol = "diseases",
+       col.regions = viridis(100),
+       main = "Number Of Different Diseases Recorded In That Country, Per Gideon")
+```
+
+
+### GDP per capita (`gdp_per_cap`)
+
+```{r}
+spplot(data_map, zcol = "gdp_per_cap",
+       col.regions = viridis(100),
+       main = "Gdp Per Capita")
+```
+
+
+### total health expenditure per capita, in USD (`health_exp_tot_usd`)
+
+```{r}
+spplot(data_map, zcol = "health_exp_tot_usd",
+       col.regions = viridis(100),
+       main = "Total Health Expenditure Per Capita, In Usd")
+```
+
+
+### government health expenditure per capita, in USD (`health_exp_govt_usd`)
+
+```{r}
+spplot(data_map, zcol = "health_exp_govt_usd",
+       col.regions = viridis(100),
+       main = "Government Health Expenditure Per Capita, In Usd")
+```
+
+
+### population (`population`)
+
+```{r}
+spplot(data_map, zcol = "population",
+       col.regions = viridis(100),
+       main = "Population")
+```
+
+
+### number of surveillance systems (`systems`)
+
+```{r}
+spplot(data_map, zcol = "systems",
+       col.regions = viridis(100),
+       main = "Number Of Surveillance Systems")
+```
+
+
+### surveillance systems per capita (`systems_per_cap`)
+
+```{r}
+spplot(data_map, zcol = "systems_per_cap",
+       col.regions = viridis(100),
+       main = "Surveillance Systems Per Capita")
+```
+
+## Univariate Models
+
+```{r pairs}
+ggpairs(country_data[-1])
+```
+
+### daly_all
+
+```{r}
+qplot(daly_all, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ daly_all, data = country_data, weights = systems)
+summary(m)
+```
+There's a negative correlation between the DALY rate and number of systems per capita. However, it isn't very strong.
+
+### daly_comm
+
+```{r}
+qplot(daly_comm, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ daly_comm, data = country_data, weights = systems)
+summary(m)
+```
+For the communicable diseases DALY rate, the same correlation is true, but it's less strong ("marginally significant").
+
+### death_all
+
+```{r}
+qplot(death_all, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ death_all, data = country_data, weights = systems)
+summary(m)
+```
+Again, the same correlation is true for death from all causes. It's a bit stronger here.
+
+### death_comm
+
+```{r}
+qplot(death_comm, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ death_comm, data = country_data, weights = systems)
+summary(m)
+```
+Death from communicable diseases looks similar to DALYs from communicable diseases.
+
+```{r}
+ggpairs(country_data[, 2:5])
+# If it surprises anybody, these are all very collinear. I'm going to pick only one of them to continue with.
+
+country_data %<>%
+  select(-daly_comm, -death_all, -death_comm)
+```
+
+### diseases
+
+```{r}
+qplot(diseases, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ diseases, data = country_data, weights = systems)
+summary(m)
+```
+There is a strong negative correlation between number of diseases observed per country in GIDEON and number of surveillance systems in a country. However, the causality here could be different--it could be that we don't observe diseases because there aren't many surveillance systems covering the population.
+
+### gdp_per_cap
+
+```{r}
+qplot(gdp_per_cap, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ gdp_per_cap, data = country_data, weights = systems)
+summary(m)
+```
+Positive correlation, significant. The more GDP per capita you have, the higher your number of systems per capita. It's significant all the time, moreso if you weight for population or nothing.
+
+### health_exp_tot_usd
+
+```{r}
+qplot(health_exp_tot_usd, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ health_exp_tot_usd, data = country_data, weights = systems)
+summary(m)
+```
+No significant correlation.
+
+### health_exp_govt_usd
+
+```{r}
+qplot(health_exp_govt_usd, systems_per_cap, data = country_data) + geom_smooth(method = "lm") 
+m <- lm(systems_per_cap ~ health_exp_govt_usd, data = country_data, weights = systems)
+summary(m)
+```
+No significant correlation.
+
+```{r}
+qplot(health_exp_tot_usd, health_exp_govt_usd, data = country_data)
+# These are really collinear. I'm removing government healthcare spending.
+
+country_data %<>%
+  select(-health_exp_govt_usd)
+```
+
+### Univariate models, in summary:
+
+- Negative association: DALY and death rates, number of diseases.
+- Positive association: GDP per capita.
+- No significant associations: healthcare expenditure.
+
+Weirdly, even though GDP per capita and healthcare expenditure per capita are similarly distributed ($R^2 = 0.82$), the p-value for the univariate model including GDP is 0.00687, whereas for healthcare expenditure per capita it's 0.50757.
+
+I removed all but one from the groups of collinear variables (DALY indicators, healthcare expenditure indicators).
+
+
+### A few other thoughts:
+
+- Some countries are missing, most notably china. This is because I ran `na.omit()` on the data frame. China must be missing on one of the variables in the data frame, so I'm going to look it up and fix that data merging problem, because it's an important country to include.
+- A few countries that are high on the outcome measure, outliers (Luxembourg, Malta, Greenland) may be throwing things off and I might omit them.
+- Before I do my final multivariable models, I should sketch out a DAG to crystallize my thoughts on causality. That way, I'll know which variables I *should* be excluding from the model a priori.
+- Should the outcome be `log(systems_per_capita)`?
+- I'm weighting by number of systems per country. My thought is that, this is conceptually because we sampled by number of surveillance systems, not per-country. But we're running the model at country level, so maybe we shouldn't weight. The weighting doesn't change the results that much.
+
+
+## Univariate models and multiple regression model selection
+
+- Variables to try: `gdp_per_cap`, `daly_all`, `diseases`, `health_exp_tot_usd`.
+
+
+### With `weights = systems`
+
+```{r}
+country_data$systems_per_1000000 <- country_data$systems_per_cap * 1000000
+
+
+m1 <- glm(systems_per_1000000 ~ gdp_per_cap, data = country_data, weights = systems)
+summary(m1)
+# Significant, of course.
+
+m2 <- glm(systems_per_1000000 ~ diseases, data = country_data, weights = systems)
+summary(m2)
+# Significant, positive.
+
+m3 <- glm(systems_per_1000000 ~ daly_all, data = country_data, weights = systems)
+summary(m3)
+# Significant, of course.
+
+m4 <- glm(systems_per_1000000 ~ health_exp_tot_usd, data = country_data, weights = systems)
+summary(m4)
+# Not significant
+
+m5 <- glm(systems_per_1000000 ~ gdp_per_cap + diseases , data = country_data, weights = systems)
+summary(m5)
+# All are still significant.
+
+m6 <- glm(systems_per_1000000 ~ gdp_per_cap * diseases , data = country_data, weights = systems)
+summary(m6)
+# No, this messes things up. We remove the interaction term.
+
+m7 <- glm(systems_per_1000000 ~ gdp_per_cap + diseases + daly_all , data = country_data, weights = systems)
+summary(m7)
+# No, we won't keep this. It isn't significant, and it bumps gdp_per_cap up above 0.05.
+
+m8 <- glm(systems_per_1000000 ~ gdp_per_cap + diseases + health_exp_tot_usd , data = country_data, weights = systems)
+summary(m8)
+# And, same.
+
+# So for this section, our winning model is:
+m9 <- glm(systems_per_1000000 ~ gdp_per_cap + diseases , data = country_data, weights = systems)
+summary(m9)
+# All are still significant.
+
+
+models <- list(m1, m2, m3, m4, m5, m6, m7, m8, m9)
+
+
+print_summary <- function(x) {
+  cat("\n")
+  print(x$formula)
+  # cat("\n")
+  print(knitr::kable(summary(x)$coef))
+  cat("\n")
+}
+
+```
+
+```{r, results = "asis"}
+
+models %>%
+  map(print_summary)
+
+#'
+```
+
+
+# Without `weights = systems`
+
+```{r}
+m1 <- glm(systems_per_1000000 ~ gdp_per_cap, data = country_data)
+summary(m1)
+# Significant, of course.
+
+m2 <- glm(systems_per_1000000 ~ diseases, data = country_data)
+summary(m2)
+# Not significant
+
+m3 <- glm(systems_per_1000000 ~ daly_all, data = country_data)
+summary(m3)
+# Significant, positive
+
+m4 <- glm(systems_per_1000000 ~ health_exp_tot_usd, data = country_data)
+summary(m4)
+# Significant, positive
+
+
+m5 <- lm(systems_per_1000000 ~ gdp_per_cap + diseases , data = country_data)
+summary(m5)
+# All are still significant.
+
+m6 <- lm(systems_per_1000000 ~ gdp_per_cap * diseases , data = country_data)
+summary(m6)
+# All are significant here, and the R^2 is better. But conceptually... how should I use weights?
+
+m7 <- lm(systems_per_1000000 ~ gdp_per_cap + diseases + daly_all , data = country_data)
+summary(m7)
+# DALYs aren't significant here.
+
+m8 <- lm(systems_per_1000000 ~ gdp_per_cap + diseases + health_exp_tot_usd , data = country_data)
+summary(m8)
+# Health expenditure isn't significant and it fucks with GDP's significance.
+
+# So, without `weights = systems`, our final model is:
+m9 <- lm(systems_per_1000000 ~ gdp_per_cap * diseases , data = country_data)
+summary(m9)
+
+models <- list(m1, m2, m3, m4, m5, m6, m7, m8, m9)
+
+```
+
+```{r, results = "asis"}
+
+models %>%
+  map(print_summary)
+
+#'
+```
+
+I should ask Andrew about whether to use `weights = systems`. I think *conceptually* it is the right thing to do.

@@ -70,7 +70,7 @@ National Residue Program (NRP),Faith,,,USDA Food Safety and Inspection Service (
 National Association of Health Data Organizations (NAHDO),Laura H.,,,National Association of Health Data Organizations (NAHDO),NP,,1986-current,Current,1986,C,http://www.nahdo.org/data_resources,,,,United States,,,,,http://www.nahdo.org/data_resources,NA,na,,yes,no,no,,**,,
 FoodSHIELD,Laura H.,,,National Center for Food Protection and Defense,Gov,"web-based system for communication, coordination, education, and training among the nation's food and agriculture sectors.",,Current,NF (after 2004),C,https://www.foodshield.org/,,,,United States,,,,"web-based system for communication, coordination, education, and training among the nation's food and agriculture sectors.",https://www.foodshield.org/,NA,na,,no,yes,yes,,**,,
 National Animal Health Laboratory Network,Faith,,,"USDA Animal and Plant Health Inspection Service (APHIS), United States Department of Agriculture (USDA), USDA National Institute of Food and Agriculture (NIFA)",Gov,,2006-current,Current,2006,C,http://www.aphis.usda.gov/wps/portal/banner/help?1dmy&urile=wcm%3apath%3a%2Faphis_content_library%2Fsa_our_focus%2Fsa_animal_health%2Fsa_lab_information_services%2Fsa_nahln%2Fct_national_animal_health_laboratory_network,United States,,,United States,,,,,http://www.aphis.usda.gov/wps/portal/banner/help?1dmy&urile=wcm%3apath%3a%2Faphis_content_library%2Fsa_our_focus%2Fsa_animal_health%2Fsa_lab_information_services%2Fsa_nahln%2Fct_national_animal_health_laboratory_network,NA,na,,no,yes,no,,"Avian Influenza, Bovine Spongiform Encephalopathy, Chronic Wasting Disease, Foot and Mouth Disease, Newcastle Disease, Pseudorabies (Aujeszky’s Disease), Scrapie, Swine Influenza, Vesicular Stomatitis",,
-Foodborne Outbreak Online Database FOOD Tool,Olivia W.,,,Centers for Disease Control and Prevention (CDC),Gov,online tool,,Current,1998,2013,http://wwwn.cdc.gov/foodborneoutbreaks/Default.aspx,,,,United States,,,,online tool,http://wwwn.cdc.gov/foodborneoutbreaks/Default.aspx,NA,na,no,yes,no,no,,foodborne,Tool to allow the public to view information from Foodborne Disease Outbreak Surveillance System,
+Foodborne Outbreak Online Database FOOD Tool,Olivia W.,,,Centers for Disease Control and Prevention (CDC),Gov,online tool,,Current,1998,C,http://wwwn.cdc.gov/foodborneoutbreaks/Default.aspx,,,,United States,,,,online tool,http://wwwn.cdc.gov/foodborneoutbreaks/Default.aspx,NA,na,no,yes,no,no,,foodborne,Tool to allow the public to view information from Foodborne Disease Outbreak Surveillance System,
 Bureau of HIV/AIDS Epidemiology New York State,Faith,,,New York State Department of Health,Gov,bureau,,Current,nf ,C,http://www.health.ny.gov/diseases/aids/general/about/surveillance.htm,,,New York,United States,,,,bureau,http://www.health.ny.gov/diseases/aids/general/about/surveillance.htm,NA,na,,yes,no,no,,HIV/AIDS,,
 Iowa Electronic Health Markets (IEhM),Laura H.,,,University of Iowa,NP,,2007-2009,Terminated,2007,2009,http://news-releases.uiowa.edu/2009/may/050409swine_flu_market.html,,,Iowa,United States,,,,,http://news-releases.uiowa.edu/2009/may/050409swine_flu_market.html,NA,na,no,yes,no,no,,influenza (H1N1),,
 Early Detection and Distribution Mapping System (EDDMapS),Laura H.,,,The University of Georgia - Center for Invasive Species and Ecosystem Health,NP,tracks invasive species,,Current,2005,C,http://www.eddmaps.org/,,,,United States,,Users,"user-reported sightings, reviewed by state verifiers",tracks invasive species,http://www.eddmaps.org/,NA,na,,no,yes,yes,N/A,N/A,"Recordng species presence, not diseases",
@@ -85,7 +85,7 @@ Emerging Infections Programme (EIP),Olivia W.,,,Centers for Disease Control and 
 ESPnet,Laura H.,,,"CDC, Harvard Medical School, MDPH","NP, Gov",software system,,Terminated,2009,2011,http://esphealth.org/ESPnet/images/overview.html,,,,United States,,,,software system,http://esphealth.org/ESPnet/images/overview.html,NA,na,,yes,no,no,ILI,"nonspecific (notifiable diseases), diabetes",,
 North Carolina Department of Public Health and Human Services (NC DPH),Laura H.,,,North Carolina State Government,Gov,,,Current,NF ,C,http://epi.publichealth.nc.gov/cd/report.html,,,North Carolina,United States,,,,cant find,http://epi.publichealth.nc.gov/cd/report.html,NA,na,,yes,yes,no,,nonspecific (reportable diseases),http://publichealth.nc.gov/,
 Indiana National Electronic Disease Surveillance System (I-NEDSS),Laura H.,,,Indiana State Department of Health (ISDH) ,Gov,,1999-current,Current,1999,C,http://wwwn.cdc.gov/nndss/script/nedss.aspx,,,Indiana,United States,,,,,http://wwwn.cdc.gov/nndss/script/nedss.aspx,NA,na,,yes,no,no,,nonspecific (reportable diseases),,
-National Healthcare Safety Network,Laura H.,,,"National Center for Infectious Diseases (NCID), Centers for Disease Control and Prevention (CDC)",Gov,,2006-current,Current ,2006,2015,http://www.cdc.gov/nhsn/index.html,,,,United States,,CDC,,,http://www.cdc.gov/nhsn/index.html,NA (communication system),na,,yes,no,no,,nonspecific,"monitors a wide range of diseases, as well as healthcare associated infections, healthcare personnel vaccination, antimicrobial resistance, etc.",
+National Healthcare Safety Network,Laura H.,,,"National Center for Infectious Diseases (NCID), Centers for Disease Control and Prevention (CDC)",Gov,,2006-current,Current ,2006,C,http://www.cdc.gov/nhsn/index.html,,,,United States,,CDC,,,http://www.cdc.gov/nhsn/index.html,NA (communication system),na,,yes,no,no,,nonspecific,"monitors a wide range of diseases, as well as healthcare associated infections, healthcare personnel vaccination, antimicrobial resistance, etc.",
 Public Health Laboratory Information System (PHLIS),Laura H.,,,"National Center for Infectious Diseases (NCID), Centers for Disease Control and Prevention (CDC) ",Gov,,1995-2014,Terminated,1988,1994,http://wonder.cdc.gov/wonder/sci_data/misc/type_txt/phlis.asp,,,"Connecticut, Delaware, District of Columbia, Maine, Maryland, Massachusetts, New Hampshire, New Jersey, New York City, Pennsylvania, Rhode Island, Vermont, Alabama, Florida, Georgia, Kentucky, Mississippi, North Carolina, Puerto Rico, South Carolina, Tennessee, Virginia, Virgin Islands, West Virginia, Illinois, Indiana, Iowa, Michigan, Minnesota, Nebraska, North Dakota, Ohio, South Dakota, Wisconsin, Arkansas, Kansas, Louisiana, Missouri, Oklahoma, Texas, Arizona, Colorado, Idaho, Montana, Nevada,                     New Mexico, Utah, Wyoming, Alaska, American Samoa, California, Guam,                     Hawaii, Northern Mariana Islands, Oregon, Washington",United States,,,,,http://wonder.cdc.gov/wonder/sci_data/misc/type_txt/phlis.asp,NA (software),na,,yes,yes,nf*,,"malaria, cryptosporidiosis",,
 Texas Department of State Health Services National Electronic Disease Surveillance System (DSHS NEDSS),Laura H.,,,Texas Department of State Health Services (DSHS),Gov,,,Current,nf ,C,http://www.dshs.state.tx.us/nedss/default.shtm,,,Texas,United States,,,,,http://www.dshs.state.tx.us/nedss/default.shtm,NA (software),na,NF,yes,no,no,,nonspecific,,
 North Carolina Collaborative for Bio-Preparedness (NCB-Prepared),Laura H.,,,"US Department of Homeland Security (DHS), University of North Carolina at Chapel Hill (UNC-CH), North Carolina State University (NCSU), SAS ","Gov, NP",,,Current,2010,C,http://www.ncb-prepared.org/,,,,United States,,,,,http://www.ncb-prepared.org/,NF,na,NF,yes,yes,yes,NF,NF,,
@@ -104,9 +104,393 @@ National Electronic Disease Surveillance System (NEDSS) & NEDSS Base System (NBS
 Bio-surveillance Common Operating Picture (BCOP),Laura H.,,,"US Department of Homeland Security (DHS), FAZD Center ",Gov,,,Current,2009,C,http://www.emergencymgmt.com/health/Biosurveillance-Common-Operating-Picture.html,,,,United States,,,,,http://www.emergencymgmt.com/health/Biosurveillance-Common-Operating-Picture.html,"PHOR, NPHR, clinical, non-clinical",na,NF,yes,yes,yes,,nonspecific,,
 Disease Maps,Olivia W.,,,United States Geological Survey (USGS),Gov,,2000-current,Current,2000,C,http://diseasemaps.usgs.gov/faqs.html?wnv,"All US States: North Carolina and Virginia at state level, all others at county level",,,United States,,"State and local health departmets, CDC",confirmed cases,,http://diseasemaps.usgs.gov/faqs.html?wnv,"PHOR, other surveillance systems",na,,yes,yes,no,,"West Nile Virus, St. Louis Encephalitis, Eastern Equine Encephalitis, Western Equine Encephalitis, La Cross Encephalitis, Powassan Virus, Dengue Virus, Chikungunya",,
 National Animal Health Surveillance System (NAHSS),Olivia W.,,,USDA APHIS,Gov,,,Current,2001,C,,,,,United States,,Many federal and state government agencies,,,http://www.aphis.usda.gov/wps/portal/aphis/ourfocus/animalhealth?1dmy&urile=wcm%3Apath%3A%2Faphis_content_library%2Fsa_our_focus%2Fsa_animal_health%2Fsa_monitoring_and_surveillance%2Fsa_nahss%2Fct_national_animal_health_surveillance_system,"PHOR, other surveillance systems, lab, NPHR",na,,no,yes,no,,nonspecific,,
-locust watch,Laura H.,,,Food and Agriculture Organization of the United Nations ,Gov ,,2009-current,Current,2009,C,http://www.fao.org/ag/locusts/en/info/info/index.html,,,,United Nations,,,,,http://www.fao.org/ag/locusts/en/info/info/index.html,field reporting,na,no,no,yes,no,,desert locust swarm,,
-Emergency Prevention System for Food Safety (EMPRES),Laura H.,,,Food and Agriculture Organization of the United Nations (FAO),Gov,,1994-current,Current,1994,C,http://www.fao.org/food-chain-crisis/en/,,,,United Nations,,,,,http://www.fao.org/food-chain-crisis/en/,"NPHR, clinical?*",na,no,yes,yes,yes,,foodborne illness,,
-Animal Health and Veterinary Laboratories Agency (AHVLA),Laura H.,,,"Department for Environment, Food, and Rural Affairs (DEFRA) ",Gov,,2011-current,Current,2011,C,http://www.defra.gov.uk/ahvla-en/about-us/,,,,United Kingdom,,,,,http://www.defra.gov.uk/ahvla-en/about-us/,"clinical, lab, field reporting",na,,no,yes,no,,nonspecific (animal diseases),,
+locust watch,Laura H.,,,Food and Agriculture Organization of the United Nations ,Gov ,,2009-current,Current,2009,C,http://www.fao.org/ag/locusts/en/info/info/index.html,,,,"Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia (Plurinational State of)
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei Darussalam
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Canada
+Cabo Verde
+Central African Republic
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Cook Islands
+Costa Rica
+Côte d'Ivoire
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Democratic People's Republic of Korea
+Denmark
+Democratic Republic of the Congo
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran (Islamic Republic of)
+Iraq
+Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Kuwait
+Kyrgyzstan
+Lao People's Democratic Republic
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Lithuania
+Luxembourg
+Madagascar
+Malaysia
+Maldives
+Malta
+Marshall Islands
+Malawi
+Mauritania
+Mali
+Mauritius
+Mexico
+Micronesia (Federated States of)
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Niue
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Republic of Korea
+Republic of Moldova
+Romania
+Russian Federation
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syrian Arab Republic
+Tajikistan
+Thailand
+The former Yugoslav Republic of Macedonia
+Timor-Leste
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United Republic of Tanzania
+United States of America
+Uruguay
+Uzbekistan
+Vanuatu
+Venezuela (Bolivarian Republic of)
+Viet Nam
+Yemen
+Zambia
+Zimbabwe",,,,,http://www.fao.org/ag/locusts/en/info/info/index.html,field reporting,na,no,no,yes,no,,desert locust swarm,,
+Emergency Prevention System for Food Safety (EMPRES),Laura H.,,,Food and Agriculture Organization of the United Nations (FAO),Gov,,1994-current,Current,1994,C,http://www.fao.org/food-chain-crisis/en/,,,,"Afghanistan Albania Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia (Plurinational State of)
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei Darussalam
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Canada
+Cabo Verde
+Central African Republic
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Cook Islands
+Costa Rica
+Côte d'Ivoire
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Democratic People's Republic of Korea
+Denmark
+Democratic Republic of the Congo
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran (Islamic Republic of)
+Iraq
+Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Kuwait
+Kyrgyzstan
+Lao People's Democratic Republic
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Lithuania
+Luxembourg
+Madagascar
+Malaysia
+Maldives
+Malta
+Marshall Islands
+Malawi
+Mauritania
+Mali
+Mauritius
+Mexico
+Micronesia (Federated States of)
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Niue
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Republic of Korea
+Republic of Moldova
+Romania
+Russian Federation
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syrian Arab Republic
+Tajikistan
+Thailand
+The former Yugoslav Republic of Macedonia
+Timor-Leste
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United Republic of Tanzania
+United States of America
+Uruguay
+Uzbekistan
+Vanuatu
+Venezuela (Bolivarian Republic of)
+Viet Nam
+Yemen
+Zambia
+Zimbabwe",,,,,http://www.fao.org/food-chain-crisis/en/,"NPHR, clinical?*",na,no,yes,yes,yes,,foodborne illness,,
+Animal Health and Veterinary Laboratories Agency (AHVLA),Laura H.,,,"Department for Environment, Food, and Rural Affairs (DEFRA) ",Gov,,2011-current,Current,2011,C,http://www.defra.gov.uk/ahvla-en/about-us/,,,,United Kingdom,,,,,#ERROR!,"clinical, lab, field reporting",na,,no,yes,no,,nonspecific (animal diseases),,
 Tick Recording Scheme (TRS),Faith,,,Public Health England,Gov,,,Current,2005,C,https://www.gov.uk/tick-recording-scheme,,,,United Kingdom,,,,,https://www.gov.uk/tick-recording-scheme,field reporting,na,,yes,Yes,no,,presence of ticks,,
 New Disease Reports (NDR),http://www.ndrs.org.uk/index.php,KEEP,ZG-yes,British Society for Plant Pathology,NP,academic journal,,Current,2000,C,http://www.ndrs.org.uk/,,,,United Kingdom,,,,,http://www.ndrs.org.uk/,journals,NA,,no,no,yes,,nonspecific (plant diseases),,
 APHA Disease Surveillance Reports,Faith,,,Animal and Plant Health Agency (APHA),Gov,,,Current,2011,C ,,,,,United Kingdom,,,,,https://www.gov.uk/government/publications/disease-surveillance-reports-2014,"lab, clinical",na,,no,yes,no,,nonspecific,,
@@ -124,7 +508,7 @@ Health Management Information System(HMIS),http://globalhealthsciences.ucsf.edu/
 Swaziland's Health Information System,Faith,,,"Central Statistics Office, transferred to Ministry of Health 1979",Gov,,,Current,1978,C,http://www.who.int/healthmetrics/library/countries/HMN_SWZ_Assess_Final_2007_01_en.pdf,,,,Swaziland,,,,,http://www.who.int/healthmetrics/library/countries/HMN_SWZ_Assess_Final_2007_01_en.pdf,NA,na,,yes,no,no,,nonspecific,,
 Infectious Disease Surveillance and Analysis System (IDSAS),Faith,,,"Department of Animal Production and Health (DAPH), University of Peradeniya","Gov, NP",,,Terminated,2009,2009,http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3294391/,,,,Sri Lanka,,,,,http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3294391/,field reporting,na,,no,yes,no,,nonspecific,http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3294391/,
 La Red Nacional de Vigilancia Epidemiológica (RENAVE) (National Epidemiological Surveillance Network),Faith,,,Instituto de Salud Carlos III ,Gov ,,,nf ,1995,nf ,http://ocw.unican.es/ciencias-de-la-salud/atencion-a-la-salud-de-la-comunidad/materiales/Tema%2015.pdf,Spain,,,Spain,,,,,http://ocw.unican.es/ciencias-de-la-salud/atencion-a-la-salud-de-la-comunidad/materiales/Tema%2015.pdf,"clinical, lab",na,,yes,yes,yes,,nonspecific,,
-Federation of Infectious Diseases Societies of Southern Africa (FIDSSA),Laura H.,,,"Infectious Diseases Society of Southern Africa (IDSSA), Sexually Transmitted Diseases Society of Southern Africa (STDSSA), Infection Control Society of South Africa (ICSSA), National Surveillance Forum (NASF), The South African Society of Travel Medicine (SASTM) ",nf (society),,,Current,2008,C,http://www.fidssa.co.za/A_SurvData.asp,Southern Africa,,,Southern Africa,,,,,http://www.fidssa.co.za/A_SurvData.asp,NA (communication network),na,,yes,nf,nf,,NF,Surveillance section of website is password-protected,
+Federation of Infectious Diseases Societies of Southern Africa (FIDSSA),Laura H.,,,"Infectious Diseases Society of Southern Africa (IDSSA), Sexually Transmitted Diseases Society of Southern Africa (STDSSA), Infection Control Society of South Africa (ICSSA), National Surveillance Forum (NASF), The South African Society of Travel Medicine (SASTM) ",nf (society),,,Current,2008,C,http://www.fidssa.co.za/A_SurvData.asp,Southern Africa,,,South Africa,,,,,http://www.fidssa.co.za/A_SurvData.asp,NA (communication network),na,,yes,nf,nf,,NF,Surveillance section of website is password-protected,
 South Asia Field Epidemiology and Technology Network (SAFETYNet),Laura H.,,,"South Asia Field Epidemiology and Technology Network, Inc.  ",NP ,,,Terminated,2009,2012,http://safetynet.asia/,South Asia,,,South Asia,,,,,http://safetynet.asia/,NA (network),na,,yes,yes,yes,,nonspecific,,
 Ministerstvo zdravotníctva Slovenskej republiky/Ministry of Health of the Slovak Republic,Laura H.,,,Slovak Government,Gov,no,,Current,2001,C,http://www.health.gov.sk/Titulka,Slovakia,,,Slovakia,,,,no,http://www.health.gov.sk/Titulka,NA,na,,nf,nf,nf,,NF,,
 "Ministry of Health, Singapore",Laura H.,,,Singaport Government,Gov,can't find,,nf ,nf ,nf ,https://www.moh.gov.sg/content/moh_web/home/about-us.html,,,,Singapore,,,,can't find,https://www.moh.gov.sg/content/moh_web/home/about-us.html,NA,na,,yes,no,no,,"Haemophilus Influenza Type B Disease
@@ -209,7 +593,7 @@ Joint Research Centre,Olivia W.,,,European Comission,Gov,ZG-yes Can't find,,Curr
 Trade Control and Expert System (TRACES),http://memim.com/traces.html,KEEP,ZG-yes,European Commission,Gov,communication network,,Current,2005,C,http://ec.europa.eu/food/animal/diseases/traces/about/index_en.htm,,,,European Union,,,,,http://ec.europa.eu/food/animal/diseases/traces/about/index_en.htm,NPHR,na,,no,yes,no,,NA,tracking movement of animal products,
 Trade Control and Expert System (TRACES),Olivia W.,in review,Karissa,European Commission,Gov,communication network,2004- present,current,2004,C,http://memim.com/traces.html,,,,European Commission,,"Veterniary structures (especially border inspection posts), members states' central veterinary authorities, European Commission and central authorities and local inspection posts of non-EU countries",,communication network,http://memim.com/traces.html,NA,na,,no,yes,no,,NA,animal transport/movement/importation,
 ArboZoonet,Laura H.,,,European Centre for Disease Prevention and Control (ECDC),Gov,,2008-2011,Terminated,2008,2011,http://cordis.europa.eu/result/rcn/55254_en.html,,,,"Europe, Asia, Africa",,,,,http://cordis.europa.eu/result/rcn/55254_en.html,lab,na,,yes,yes,no,,"West Nile fever, Rift Valley fever, Crimean-Congo hemorrhagic fever, emerging viral vector-borne zoonotic diseases",,
-EuroTravNet,Faith,,,International Society of Travel Medicine (ISTM),NP,,,Current,2008,C,http://www.istm.org/eurotravnet,,,,Europe,,,,,http://www.istm.org/eurotravnet,NA,na,,yes,no,no,,nonspecific (tropical/communicable diseases),,
+EuroTravNet,Faith,,,International Society of Travel Medicine (ISTM),NP,,,Current,2008,C,http://www.istm.org/eurotravnet,,,,"France, Germany, Italy, Netherlands, Norway, Spain, Sweden, Switzerland, United Kingdom",,,,,http://www.istm.org/eurotravnet,NA,na,,yes,no,no,,nonspecific (tropical/communicable diseases),,
 Electronic Foodborne and Non-foodborne Gastrointenstinal Outbreak Surveillance System (eFOSS),Faith,,,Public Health England,Gov,,,Current,2009,C,https://bioinfosecure.phe.org.uk/efoss,,,,"England, Wales",,,,,https://bioinfosecure.phe.org.uk/efoss,NF,na,,yes,yes,no,,infectious intestinal disease,http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32003L0099,
 Bovine TB Surveillance in Great Britain,Faith,,,Animal and Plant Health Agency (APHA),Gov,,,Terminated,2009,2013,,,,,"England, Scotland, Wales",,,,,https://www.gov.uk/government/statistics/bovine-tb-surveillance-in-great-britain,"lab, clinical",na,,no,yes,no,,Bovine TB,,
 Great Britain Wildlife Disease Surveillance Partnership Quarterly Report,Faith,,,Great Britain Wildlife Disease Surveillance Partnership,Gov,,,Terminated,2012,2013,http://webarchive.nationalarchives.gov.uk/20140707135733/http://www.defra.gov.uk/ahvla-en/publication/wildlife-survreports/,,,,"England, Scotland, Wales",,,,,http://webarchive.nationalarchives.gov.uk/20140707135733/http://www.defra.gov.uk/ahvla-en/publication/wildlife-survreports/,PHOR,na,,no,yes,yes,,nonspecific,,
@@ -354,7 +738,7 @@ RES-ONERBA,,KEEP,ZG-yes,,,database for bacterial resistance,,Current,1997,C,http
 Healthcare-Associated Infections Surveillance Network (HAI-Net),Faith,,,European Centre for Disease Protection and Control (ECDC),Gov,,2008-2012,Terminated ,2008,2012,http://ecdc.europa.eu/en/activities/surveillance/HAI/Pages/default.aspx,,,,European Union,,,,,http://ecdc.europa.eu/en/activities/surveillance/HAI/Pages/default.aspx,clinical,nf,,yes,no,no,,Healthcare associated infections,,
 RAS BICHAT,,KEEP,ZG-yes,European Comission,Gov,"communication system, not surveillance. Relies on member state surveillance systems",,nf ,2002,nf ,,,,,European Union,,,,,http://ec.europa.eu/health/preparedness_response/generic_preparedness/planning/rapid_alert_en.htm,"NPHR, PHOR (state reports)",nf,,no,no,no,,Chemical/biological threats released,,
 European Legionnaires Disease Surveillance Network (EDLSNet),Olivia W.,,,European Centre for Disease Prevention and Control (ECDC),Gov,Repeat,1986-current,Current,1986,C,,,,,European Union,,network,case information,,,PHOR,nf,no,yes,no,no,,Legionnaire's disease,,
-European Working Group for Legionella Infections Network(EWGLINet),Laura H.,,,European Centre for Disease Prevention and Control (ECDC),Gov,,1986-2012,Terminated,1986,2012,http://www.ewgli.org/,,,,Europe,,,,,http://www.ewgli.org/,clinical,nf,,yes,NF,NF,,Legionnaire's Disease,,
+European Working Group for Legionella Infections Network(EWGLINet),Laura H.,,,European Centre for Disease Prevention and Control (ECDC),Gov,,1986-2012,Terminated,1986,2012,http://www.ewgli.org/,,,,"Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, UK, iceland, norway",,,,,http://www.ewgli.org/,clinical,nf,,yes,NF,NF,,Legionnaire's Disease,,
 British Paediatric Surveillance Unit,Faith,,,Royal College of Paediatrics and Child Health,Gov,?,,Current,1997,C,http://www.rcpch.ac.uk/what-we-do/bpsu/current-studies/current-studies,,,,"England, Scotland, Wales",,,,,http://www.rcpch.ac.uk/improving-child-health/research-and-surveillance/british-paediatric-surveillance-unit/british-paedia,clinical,nf,,yes,no,no,progressive intellectual/neruological degeneration,"congenital rubella, HIV/AIDS, perinatal HIV exposure, enterovirus meningitis, parechovirus meningitis, nutritional rickets, type 2 diabetes, acute rheumatic fever, behcet's syndrome",also exchange blood transfusion (EBT),
 Pacific Public Health Surveillance Network (PPHSN),Olivia W.,,,"Secretariat of the Pacific Community (SPC), WHO",Gov,,,Current,1996,C,http://www.pphsn.net/,,,"American Samoa, French Polynesia, Guam, Pitcairn Islands, Wallis and Futuna, Northern Mariana Islands, New Caledonia","Cook Islands, Federated States of Micronesia, Fiji, Kiribati, Marshall Islands, Nauru, New Zealand, Niue, Palau, Papua New Guinea, Samoa, Solomon Islands, Tonga, Tuvalu, Vanuatu",,,,,http://www.pphsn.net/,"clinical, PHOR",nf,no,yes,no,no,,"dengue, measles, rubella, influenza, leptospirosis, typhoid fever, cholera, SARS and HIV/STIs",,
 China Center for Disease Control and Prevention,Laura H.,,,Chinese Center for Disease Control and Prevention (Chinese CDC) ,Gov,,2010-current,Current,2010,C,http://www.chinacdc.cn/en/,China,,,China,,,,,http://www.chinacdc.cn/en/,NF*,nf,,yes,nf,nf,,"Creuutzfeldt-Jacob Disease, HIV/STD, Influenza",,
@@ -425,7 +809,7 @@ NHSBT/PHE surveillance programme,Faith,,,Public Health England,Gov,,,Terminated,
 UK Severe Influenza Surveillance System (USISS),Faith,,,Public Health England,Gov,,,Terminated,2011,2012,http://webarchive.nationalarchives.gov.uk/20140626151846/http://hpa.org.uk/webc/HPAwebFile/HPAweb_C/1317132396353,,,,United Kingdom,,,,,http://webarchive.nationalarchives.gov.uk/20140626151846/http://hpa.org.uk/webc/HPAwebFile/HPAweb_C/1317132396353,lab,no,,yes,no,no,,influenza,http://webarchive.nationalarchives.gov.uk/20140626151846/http://hpa.org.uk/Topics/InfectiousDiseases/InfectionsAZ/SeasonalInfluenza/EpidemiologicalData/30influsSourcesofUKfludata/,
 PHE VRD/RCGP scheme,Faith,,,Public Health England,Gov,,,Current,2007,C,https://www.gov.uk/sources-of-uk-flu-data-influenza-surveillance-in-the-uk,,,,United Kingdom,,,,,https://www.gov.uk/sources-of-uk-flu-data-influenza-surveillance-in-the-uk,lab,no,,yes,no,no,ILI,influenza,,
 HIV and AIDS Reporting System (HARS),Faith,Enhanced HIV/AIDS Reporting System (eHARS),,Public Health England,Gov,,,Absorbed,1981,2012,https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/213117/HIV-Outpatients-HARS-Presentation.pdf,,,,United Kingdom,,,,,https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/213117/HIV-Outpatients-HARS-Presentation.pdf,,no,,yes,no,no,,HIV/AIDS,,
-Thai National Influenza Center: Influenza Surveillance,Laura H.,,,Thai National Influenza Center,Gov,,,Current,2008,2010,http://www.thainihnic.org/WeeklyReport.asp,Thailand,,,Thailand,,,,,http://www.thainihnic.org/WeeklyReport.asp,clinical,no,,yes,no,no,,Influenza,,
+Thai National Influenza Center: Influenza Surveillance,Laura H.,,,Thai National Influenza Center,Gov,,,Current,2008,C,http://www.thainihnic.org/WeeklyReport.asp,Thailand,,,Thailand,,,,,http://www.thainihnic.org/WeeklyReport.asp,clinical,no,,yes,no,no,,Influenza,,
 Malaria Early Epidemic Detection System (MEEDS),Olivia W.,,,The Zanzibar Malaria Control Program (ZMCP),Gov,,,Absorbed,2008,2013,http://globalhealthsciences.ucsf.edu/sites/default/files/content/ghg/mei-surveillance-systems-to-facilitate.pdf,,,Zanzibar,Tanzania,,,mobile reporting,,http://globalhealthsciences.ucsf.edu/sites/default/files/content/ghg/mei-surveillance-systems-to-facilitate.pdf,"clinical, other surveillance systems",no,no,yes,no,no,,malaria,,
 "Disease Surveillance Express, Taiwan",Laura H.,,,"Centers for Disease Control, Taiwan ",Gov,,2003-current,Current,2003,C,http://www.cdc.gov.tw/english/list.aspx?treeid=00ED75D6C887BB27&nowtreeid=F0131176AA46D5DB,Taiwan,,,Taiwan,,,,,http://www.cdc.gov.tw/english/list.aspx?treeid=00ED75D6C887BB27&nowtreeid=F0131176AA46D5DB,"PHOR, clinical, lab",no,,yes,no,no,,"Anthrax, Botulism, Brucellosis, Chikungunya Fever, Dengue, DHF, Diphtheria, Hantavirus pulmonary syndrome (HPS), HIV/AIDS, Legionnaire's Disease, Leptospirosis, Lyme Disease, Malaria, Marburg Fever, Measles, Melioidosis, Cyclosporiasis, Pertussis",,
 "Enhanced Pertussis Surveillance Program, Sweden",Faith,,,Smittskyddinstitutet,Gov,,,Terminated,1997,2010,http://www.folkhalsomyndigheten.se/pagefiles/14856/pertussis-surveillance%20in-sweden-thirteen-year-report.pdf,,,,Sweden,,,,,http://www.folkhalsomyndigheten.se/pagefiles/14856/pertussis-surveillance%20in-sweden-thirteen-year-report.pdf,lab,no,,yes,no,no,,pertussis,http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=21032,
@@ -484,7 +868,7 @@ European Union Invasive Bacteria Infections Surveillance Network (EU-IBIS),Laura
 European Invasive Bacterial Diseases Surveillance Network (EU-IBD),Faith,,,ECDC,Gov,,,absorbed,1999,2007,http://ecdc.europa.eu/en/healthtopics/vaccine-preventable-diseases/EU_IBD/Pages/index.aspx,,,,European Union,,,,,http://ecdc.europa.eu/en/healthtopics/vaccine-preventable-diseases/EU_IBD/Pages/index.aspx,lab,no,no,yes,no,no,,"N. meningitidies, H. influenzae, S. pneumoniae",,
 European Network for Pertussis Surveillance,Faith,*can't find,,European Centre for Disease Prevention and Control (ECDC),Gov,,,nf ,nf ,nf ,http://ecdc.europa.eu/en/aboutus/networks/Pages/networks.aspx,,,,European Union,,,,,,lab,no,,nf,nf,nf,,pertussis,,
 "International Surveillance Network for the Enteric Infections Salmonella, Campylobacter and VTEC O157 (Enter-Net)",Olivia W.,done,Karissa,"European Commission funded. hosted at the Health Protection Agency, Centre for Infection, in London, UKHPA became part of Public Health England in 2013",Gov,,1993- 2008,absorbed,1993,2008,http://ecdc.europa.eu/en/activities/surveillance/Documents/0909_Enternet_Summary_of_the_Enternet_network_evaluation_and_assessment.pdf http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2640286/pdf/9716971.pdf,Europe,,,European Union,,network of labs in Europe,lab results/confirmed cases,,http://ecdc.europa.eu/en/activities/surveillance/Documents/0909_Enternet_Summary_of_the_Enternet_network_evaluation_and_assessment.pdf http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2640286/pdf/9716971.pdf,lab,no,no,yes,no,no,no,"salmonellosis, verotoxin producing E. coli (VTEC) and campylobacteriosis.","As of Oct. 2007, Enternet was integrated into the ECDC; data collection has been taken over by The European Surveillance System (TESSy)",
-(European Network for Plant Health Information Systems) EUROPHYT: EUROPHYT-CIRCA & EUROPHYT-PHYT,Olivia W.,done,Karissa,European Commission and member states. Launched by DG Health and Consumers Protection.,Gov,,,current,1992,2003,http://ec.europa.eu/food/plant/plant_health_biosecurity/europhyt/network/index_en.htm,European Union,,,European Union,,plant health authorities,data entered by plant health authorities about interceptions they have made,,http://ec.europa.eu/food/plant/plant_health_biosecurity/europhyt/network/index_en.htm,NPHR,no,,no,no,yes,,NA,http://ec.europa.eu/idabc/en/document/2267/16.html#what,
+(European Network for Plant Health Information Systems) EUROPHYT: EUROPHYT-CIRCA & EUROPHYT-PHYT,Olivia W.,done,Karissa,European Commission and member states. Launched by DG Health and Consumers Protection.,Gov,,,current,1992,C,http://ec.europa.eu/food/plant/plant_health_biosecurity/europhyt/network/index_en.htm,European Union,,,European Union,,plant health authorities,data entered by plant health authorities about interceptions they have made,,http://ec.europa.eu/food/plant/plant_health_biosecurity/europhyt/network/index_en.htm,NPHR,no,,no,no,yes,,NA,http://ec.europa.eu/idabc/en/document/2267/16.html#what,
 European Antimicrobial Resistance Surveillance Network Surveillance (EARS-Net),Olivia W.,,,European Centre for Disease Prevention and Control (ECDC),Gov,,,Current,2010,C,,,,,European Union,,network of laboratories and hospital,surveys about blood cultures,,,"Other surveillance systems, lab",no,no,yes,no,no,,antibiotic-resistant strains of bacteria,,
 European Network for Hepatitis B and C Surveillance,Faith,,,ECDC,Gov,,,absorbed,2006,2011,http://ecdc.europa.eu/en/healthtopics/viral-hepatitis/hepatitis/Pages/european-network-hepatitis.aspx,,,,European Union,,,,,http://ecdc.europa.eu/en/healthtopics/viral-hepatitis/hepatitis/Pages/european-network-hepatitis.aspx,PHOR,no,no,yes,no,no,,Hepatitis B; Hepatitis C,,
 Survey of Prevalent HIV Infections Diagnosed (SOPHID),Faith,,,Public Health England,Gov,,,terminated,1995,2014,https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/336380/SOPHID_metadata_v2_v200913__3_.pdf,,,,"England, Wales, Northern Ireland ",,,,,,clinical,no,,yes,no,no,,HIV/AIDS,https://www.gov.uk/hiv-surveillance-systems,
@@ -500,7 +884,7 @@ DIVINE-NET,Olivia W.,,ZSG,European Centre for Disease Prevention and Control,Gov
 Statens Serum Institut (SSI),Laura H.,,,Danish Ministry of Health,Gov,not a surveillance system,,Current,9/9/1902,C,http://www.ssi.dk/English.aspx,Denmark,,,Denmark,,,,,http://www.ssi.dk/English.aspx,lab,no,,yes,no,no,,nonspecific,,
 Boletín Epidemiológico del IPK,Laura H.,,,Departamento de Vigilancia Epidemiológica de la Subdirección de Epidemiología del IPK ,Gov,,2004-current,Current,2004,C,http://boletines.sld.cu/ipk/informacion/,Cuba,,,Cuba,,,,,http://boletines.sld.cu/ipk/informacion/,"other surveillance systems, PHOR",no,no,yes,no,no,Diarrhea,"Diarrhea, Leprosy, Malaria, Measles, Mumps, Rubella, Shigellosis, Tetanus, Typhoid, Hepatitis, Varicella, Chickenpox, Pertussis",,
 Canadian Perinatal HIV Surveillance Program,Robyn,done,Robyn,Public Health Agency of Canada,Gov,,-current,Terminated,1979,2012,,Canada,,,Canada,,"HIV Clinics: national, non-nominal confidential survey of infants known to participating pediatricians in tertiary care centers and specialists","laboratory confirmed cases by four months of age (before that ""infection status not confirmed"")",,,clinical,no,no,yes,no,no,,HIV/AIDS,,
-Creutzfeldt-Jakob Disease Surveillance System (CJDSS),Laura H.,,,Public Health Agency of Canada,Gov,,1998-current,Current ,1998,2015,http://www.phac-aspc.gc.ca/hcai-iamss/cjd-mcj/cjdss-ssmcj/stats-eng.php,Canada,,,Canada,,,,,http://www.phac-aspc.gc.ca/hcai-iamss/cjd-mcj/cjdss-ssmcj/stats-eng.php,"clinical, lab",no,no,yes,no,no,,Creutzfeldt-Jakob Disease,called 1-888-489-2999 to get more  info,
+Creutzfeldt-Jakob Disease Surveillance System (CJDSS),Laura H.,,,Public Health Agency of Canada,Gov,,1998-current,Current ,1998,C,http://www.phac-aspc.gc.ca/hcai-iamss/cjd-mcj/cjdss-ssmcj/stats-eng.php,Canada,,,Canada,,,,,http://www.phac-aspc.gc.ca/hcai-iamss/cjd-mcj/cjdss-ssmcj/stats-eng.php,"clinical, lab",no,no,yes,no,no,,Creutzfeldt-Jakob Disease,called 1-888-489-2999 to get more  info,
 Canadian Integrated Program for Antimicrobial Resistance Surveillance (CIPARS),Laura H.,,,Public Health Agency of Canada (PHAC),Gov,,1997-2007,Terminated,1997,2007,http://www.phac-aspc.gc.ca/cipars-picra/index-eng.php,Canada,,,Canada,,,,,http://www.phac-aspc.gc.ca/cipars-picra/index-eng.php,lab,no,no,yes,no,yes,,antimicrobial resistance ,,
 Canadian Congenital Anomalies Surveillance Network (CCASN),Laura H.,,,Public Health Agency of Canada (PHAC),Gov,,2002-2013,Terminated,2002,2013,http://www.phac-aspc.gc.ca/ccasn-rcsac/index-eng.php,Canada,,,Canada,,,,,http://www.phac-aspc.gc.ca/ccasn-rcsac/index-eng.php,lab,no,,yes,no,no,,chronic,,
 Respiratory Virus Detection Surveillance System Canada,Laura H.,,,Public Health Agency of Canada (PHAC),Gov,,2004-current,Current,2004,C,,Canada,,,Canada,,,,,http://www.phac-aspc.gc.ca/bid-bmi/dsd-dsm/rvdi-divr/2014-2015/28/rvdi_divr28-eng.php,lab,no,no,yes,no,no,,"Influenza, RSV, Parainfluenza, Adenovirus, hMPV, Rhinovirus, Coronavirus ",,
@@ -610,7 +994,6 @@ National Capital Region Disease Surveillance Network (NCR),Faith,,,"Johns Hopkin
 Biological spatio-temporal outbreak reasoning module (BioStorm),Olivia W.,,,Stanford University,NP,,2003-2012,Terminated,2001,2012,http://biostorm.stanford.edu/,,,,United States,,,"san fran ems data, 911 emergency calls, hospital data",,http://biostorm.stanford.edu/,"clinical, non-clinical",yes,,yes,no,no,NA,NA,"The BioStorm project differs from the majority of disease surveillance
   systems primarily due to its highly complex mechanism for classifying data
   sources and problem solvers",
-Baltimore City Health Department Emergency Preparedness & Response,Olivia W.,,Robyn,Baltimore City Health Department,Gov,health department,,Current,1793,C,http://health.baltimorecity.gov/programs/emergency-preparedness-response,,Baltimore,Maryland,United States,,"selected outpatient clinics, all 11 emergency departments in the city, all emergency medical services prehospital call centers, Bureau of Animal Control, schools, and sentinel pharmacies.","dog and cat carcasses, school absenteeism, specific OTC medication sales",health department,http://health.baltimorecity.gov/programs/emergency-preparedness-response,"clinical, non-clinical",yes,,yes,no,no,,nonspecific,,
 "Bio-Surveillance Analysis, Feedback, Evaluation, and Response (B-SAFER)",Olivia W.,,,"LANL, UNM-Health Sciences Center, and NM Dept. of Health – Office of Epidemiology","Gov, NP",,"December 10, 2002 - May 2003",Terminated,2002,2003,http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1480175/,"Albuquerque, NM",Albuquerque,New Mexico,United States,,"Local Emergency Departments, and EMS, hospitals, Poision Center, Medical Examiner's Office","clinical data from Emergency Departments and EMS; hospital admission, discharge, and transfer logs; hospital utilization data; calls to regional poison center; laboratory test requests; syndromic infectious disease surveillance reports from local medical examiner's office",,http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3456510/pdf/11524_2006_Article_BF02416902.pdf,"clinical, non-clinical",yes,,yes,no,no,nonspecific,nonspecific,seems not to have advanced past pilot stage,http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1480175/
 "North Carolina Disease Event Tracking and Epidemiologic Collection Tool (
 ) formerly known as North Carolina Bioterrorism and Emerging Infection Prevention System",Olivia W.,done,Robyn,North Carolina Division of Health,Gov,,2004-current,Current,2004,C,http://www.springer.com/cda/content/document/cda_downloaddocument/9781441912770-c1.pdf?SGWID=0-0-45-855352-p173917743,North Carolina,,North Carolina,United States,,"Emergency Departments, the Carolinas Poison Center, and the Pre-hospital Medical Information System, 24/7 acute care hospital EDs in North Carolina, includes free-standing 24/7 acute care EDs operated by hospitals","emergency department age, sex, location, hospital, insurance, chief complaint, triage notes, blood pressue, temperature, injurty code, disposition, diagnostic codes & poison center clinical effects, exposure, medical outcome & pre-hospital chief complaint, symptoms, vital signs",,http://www.springer.com/cda/content/document/cda_downloaddocument/9781441912770-c1.pdf?SGWID=0-0-45-855352-p173917743,"clinical, non-clinical",yes,no,yes,no,no,,nonspecific,https://books.google.com/books?id=aPg6CW0V0YEC&pg=PA436&lpg=PA436&dq=syndromal+surveillance+tally+sheet&source=bl&ots=GDhKKynOHf&sig=AoGl3JtL3KlgNrkkltLMUeuG_t0&hl=en&sa=X&ei=3TCIVf3DJYbksATk_YDACw&ved=0CCUQ6AEwAQ#v=onepage&q=syndromal%20surveillance%20tally%20sheet&f=false,
@@ -864,14 +1247,14 @@ Waterborne Disease and Outbreak Surveillance System (WBDOSS),Faith,,,Centers for
 Minnesota Electronic Disease Surveillance System (MEDSS),Faith,,,Minnesota Department of Health ,Gov ,,2010-2012,Terminated ,2010,2012,http://www.health.state.mn.us/divs/istm/medss/,,,Minnesota,United States,,,,,http://www.health.state.mn.us/divs/istm/medss/,"clinical, lab",nf,,yes,no,no,,nonspecific,,
 Arkansas National Notifiable Diseases Surveillance System (ADH NEDSS),Laura H.,,,Arkansas Department of Health (ADH),Gov,,2012-current,Current,2012,C,http://www.healthy.arkansas.gov/programsServices/epidemiology/Surveillance/Pages/Nedss.aspx,Arkansas,,Arkansas,United States,,,,,http://www.healthy.arkansas.gov/programsServices/epidemiology/Surveillance/Pages/Nedss.aspx,"clinical, lab",no,,yes,no,no,,nonspecific (communicable diseases),,
 Global Disease Detection Operations Center (GDDOC),Laura H.,,,Centers for Disease Control and Prevention (CDC) ,Gov,,2006-current,Current,2006,C,http://www.cdc.gov/globalhealth/healthprotection/gddopscenter/,Global,,,United States,Global,,,,http://www.cdc.gov/globalhealth/healthprotection/gddopscenter/,"clinical, lab",yes,,yes,nf,nf,,nonspecific (infectious diseases),,
-California Reportable Disease Information Exchange (CalREDIE),Faith,,,California Department of Public Health (CDPH),Gov,,2010-2013,Current ,2010,2013,http://www.cdph.ca.gov/data/informatics/tech/Pages/CALREDIE.aspx,,,California,United States,,,,,http://www.cdph.ca.gov/data/informatics/tech/Pages/CALREDIE.aspx,"clinical, lab",yes,,yes,no,no,,nonspecific (reportable diseases),,
+California Reportable Disease Information Exchange (CalREDIE),Faith,,,California Department of Public Health (CDPH),Gov,,2010-2013,Current ,2010,C,http://www.cdph.ca.gov/data/informatics/tech/Pages/CALREDIE.aspx,,,California,United States,,,,,http://www.cdph.ca.gov/data/informatics/tech/Pages/CALREDIE.aspx,"clinical, lab",yes,,yes,no,no,,nonspecific (reportable diseases),,
 Alabama Department of Public Health - Epidemiology Division,Laura H.,,,Alabama Department of Public Health (ADPH) ,Gov,,2011-current,Current,2011,C,http://www.adph.org/epi/Default.asp?id=5211,United States,,,United States,,,,,http://www.adph.org/epi/Default.asp?id=5211,"clinical, lab, ",yes,,yes,no,no,,"Notifiable Diseases (INCLUDES Anthrax, Dengue, Diphtheria, Giardiasis, Hepatitis, Leptospirosis, E. Coli, Shiga Toxin-Producing, Tetanus, Tularemia, Typhoid, Campylobacteriosis, Pertussis)",,
 Kentucky-Electronic Public Health Record System (KY-EPHRS ),Laura H.,,,Kentucky Cabinet for Health and Family Services ,Gov,,2000-current,Current,2000,C,http://chfs.ky.gov/dph/ephrs/,Kentucky,,Kentucky,United States,,,,,http://chfs.ky.gov/dph/ephrs/,"clinical, PHOR",nf,no,yes,no,no,,nonspecific,,
 National Notifiable Diseases Surveillance System (NNDSS),Olivia W.,,,Centers for Disease Control and Prevention (CDC),Gov,,,Terminated,1993,2012,http://wwwn.cdc.gov/nndss/,,,,United States,,,,,http://wwwn.cdc.gov/nndss/,"clinical, PHOR",no,no,yes,no,no,,nonspecific (reportable diseases),,
 Statistical Outbreak Detection Algorithm (SODA),Laura H.,,,"National Center for Infectious Diseases (NCID), Centers for Disease Control and Prevention (CDC), Department of Health and Human Services (HHS) ",Gov,,,nf ,nf ,nf ,http://www.cdc.gov/mmwr/preview/mmwrhtml/ss5510a1.htm,,,,United States,,,,,http://www.cdc.gov/mmwr/preview/mmwrhtml/ss5510a1.htm,"clinical, PHOR, lab",no,,yes,no,no,,foodborne,,
 Maine Disease Reporting and Clinical Consultation Line,Laura H.,,,Maine Center for Disease Control and Prevention (MeCDC),Gov,,,Current,1976,C ,http://www.maine.gov/dhhs/mecdc/infectious-disease/epi/,,,Maine,United States,,,,,http://www.maine.gov/dhhs/mecdc/infectious-disease/epi/,"lab, clinical",yes,,yes,no,no,,nonspecific (reportable diseases),,
 Wisconsin Health Alert Network (WI HAN),Laura H.,,,Wisconsin Department of Health Services (Wisconsin DHS) ,Gov,,2001-2013,Terminated,2001,2013,https://phin.wisconsin.gov/han/,Wisconsin,,Wisconsin,United States,,,,,https://phin.wisconsin.gov/han/,"lab, clinical reporting, PHOR",nf,,yes,no,no,,nonspecific,,
-Alaska Department of Epidemiology,Laura H.,,,Alaska Department of Health and Social Services - Division of Public Health (DHSS) ,Gov,,2011-current,Current ,2011,2015,http://www.epi.hss.state.ak.us/default.jsp,United States,,,United States,,,,,http://www.epi.hss.state.ak.us/default.jsp,"lab, clinical, PHOR",nf,,yes,no,no,,nonspecific,,
+Alaska Department of Epidemiology,Laura H.,,,Alaska Department of Health and Social Services - Division of Public Health (DHSS) ,Gov,,2011-current,Current ,2011,C,http://www.epi.hss.state.ak.us/default.jsp,United States,,,United States,,,,,http://www.epi.hss.state.ak.us/default.jsp,"lab, clinical, PHOR",nf,,yes,no,no,,nonspecific,,
 Plant Epidemiology and Risk Analysis Laboratory (PERAL),Laura H.,,,USDA APHIS,Gov,risk analysis,,Current,2003,C,http://www.aphis.usda.gov/wps/portal/aphis/ourfocus/planthealth?1dmy&urile=wcm%3apath%3a%2Faphis_content_library%2Fsa_our_focus%2Fsa_plant_health%2Fsa_program_overview%2Fsa_cphst%2Fct_peral,,,,United States,,,,risk analysis,http://www.aphis.usda.gov/wps/portal/aphis/ourfocus/planthealth?1dmy&urile=wcm%3apath%3a%2Faphis_content_library%2Fsa_our_focus%2Fsa_plant_health%2Fsa_program_overview%2Fsa_cphst%2Fct_peral,"lab, NPHR",na,,no,no,yes,,nonspecific,,
 National Plant Diagnostic Network (NPDN),Faith,,,"United States Department of Agriculture (USDA), Purdue University","Gov, NP",,2002-2008,Terminated ,2002,2008,http://www.npdn.org/,,,,United States,,,,,http://www.npdn.org/,"lab, NPHR",na,no,no,no,yes,,nonspecific,,
 Scientific Technology Corporation (STC) - Sentinel,Laura H.,,,Scientific Technology Corporation (STC) ,FP ,,1988-current,Current ,1988,C ,http://www.stchome.com/sentinel/,United States,,,United States,,,,,http://www.stchome.com/sentinel/,"lab, other surveillance systems, clinical, PHOR",na,,yes,no,no,,nonspecific,,
@@ -934,8 +1317,8 @@ CARE Telematics project Europe,Olivia W.,,Robyn S.,European Commission,Gov,,01/0
 Tuberculosis Surveillance Programme (EURO TB),Olivia W.,done,ZSG,European Centre for Disease Prevention and Control,Gov,,2008-current,current,2008,C,http://ec.europa.eu/research/health/infectious-diseases/antimicrobial-drug-resistance/projects/047_en.html,Europe,,,European Union,,"Network of national surveillance systems, laboratories","laboratory-confirmed cases, clinical data",,http://ec.europa.eu/research/health/infectious-diseases/antimicrobial-drug-resistance/projects/047_en.html,"clinical, lab",nf,no,yes,no,no,,tuberculosis,Became The European Tuberculosis Surveillance Network; data migrated to TESSy,
 Early Warning and Response System (EWRS),https://ewrs.ecdc.europa.eu/,KEEP,ZG-yes,European Comission,Gov,communication system,,Current,1999,C,https://ewrs.ecdc.europa.eu/,,,,European Union,,,,,http://ec.europa.eu/health/preparedness_response/generic_preparedness/planning/rapid_alert_en.htm,"clinical, PHOR",yes,,yes,no,no,,nonspecific (communicable diseases),,
 EuroSurveillance,Laura H.,,,"European Commission, Institut de Veille Sanitaire (InVS), Health Protection Agency (HPA)",Gov,,,Current,1995,C,http://www.eurosurveillance.org/Default.aspx,Europe,,,European Union,,,,,http://www.eurosurveillance.org/Default.aspx,journals,na,no,yes,NF,NF,,nonspecific (communicable diseases),,
-Foodborne Viruses in Europe (FBVE) Network Database,Faith,,,Dutch National Institue for Public Health and the Environment (RIVM),Gov,,,NF,2001,NF,http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=18867,"13 countries in Europe, not specified",,,Europe,,,"virus outbreaks: strains and their characteristics such as year, country, setting of the outbreak, and mode of transmission",,http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=18867,PHOR,no,,yes,no,no,,viral gastroentiritis,website is password protected,
-Robert Koch Institute Infectious Disease Surveillance,Olivia W.,,,Robert Koch Institute (RKI),Gov,,,Current,2001,C,http://www.rki.de/EN/Content/Prevention/Inf_Dis_Surveillance/inf_dis_down.pdf?__blob=publicationFile,,,,Europe,,,,,http://www.rki.de/EN/Content/Prevention/Inf_Dis_Surveillance/inf_dis_down.pdf?__blob=publicationFile,"PHOR, clinical, lab",,no,yes,no,no,,nonspecific (infectious diseases),,
+Foodborne Viruses in Europe (FBVE) Network Database,Faith,,,Dutch National Institue for Public Health and the Environment (RIVM),Gov,,,NF,2001,NF,http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=18867,"13 countries in Europe, not specified",,,"Germany, Denmark, Spain, Finland, France, United Kingdom, Hungary, Italy, the Netherlands, Norway, Sweden, Slovenia, Ireland",,,"virus outbreaks: strains and their characteristics such as year, country, setting of the outbreak, and mode of transmission",,http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=18867,PHOR,no,,yes,no,no,,viral gastroentiritis,website is password protected,
+Robert Koch Institute Infectious Disease Surveillance,Olivia W.,,,Robert Koch Institute (RKI),Gov,,,Current,2001,C,http://www.rki.de/EN/Content/Prevention/Inf_Dis_Surveillance/inf_dis_down.pdf?__blob=publicationFile,,,,Germany,,,,,http://www.rki.de/EN/Content/Prevention/Inf_Dis_Surveillance/inf_dis_down.pdf?__blob=publicationFile,"PHOR, clinical, lab",,no,yes,no,no,,nonspecific (infectious diseases),,
 Notifications of Infectious Diseases (NOIDS),Faith,,,Public Health England,Gov,,,Current,2010,C,https://www.gov.uk/government/collections/notifications-of-infectious-diseases-noids,,,,"England, Wales",,,,,https://www.gov.uk/government/collections/notifications-of-infectious-diseases-noids,"lab, clinical",,,yes,no,no,,nonspecific (reportable diseases),,
 Surgical Site Infection Surveillance Service,Faith,,,Public Health England’s healthcare associated infection and antimicrobial resistance department (HCAI & AMR),Gov,,,Current,2004,C,https://www.gov.uk/surgical-site-infection-surveillance-service-ssiss,,,,England,,,,,https://www.gov.uk/surgical-site-infection-surveillance-service-ssiss,clinical,no,,yes,no,no,,surgical site infections,,
 Infectious Disease Surveillance for the London 2012 Olympic and Paralympic Games,Faith,,,Eurosurveillance,Gov,,2012-2012,Terminated,2012,2012,http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=20232,,London,,England,,,,,http://www.eurosurveillance.org/ViewArticle.aspx?ArticleId=20232,"clinical, lab, PHOR",yes,no,yes,no,no,,***,,

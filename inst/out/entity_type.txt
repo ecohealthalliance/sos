@@ -1,0 +1,9 @@
+entity_type_fact
+                        For-profit                         Non-profit 
+                                19                                 94 
+                        Government             Government, Non-profit 
+                               650                                 34 
+            Government, For-profit             For-profit, Non-profit 
+                                 8                                  4 
+Government, Non-profit, For-profit 
+                                 1 

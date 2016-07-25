@@ -27,4 +27,6 @@ sos_cleaned <- data.frame(sosid, name, entity_type, status, date_created, date_t
 sos_countries <- data.frame(sosid, countries)
 
 write.csv(sos_cleaned, file = "inst/out/sos_cleaned.csv", row.names = FALSE)
+save(sos_cleaned, file = "data/sos_cleaned.RData")
 write.csv(sos_countries, file = "inst/out/sos_countries.csv", row.names = FALSE)
+save(sos_countries, file = "data/sos_countries.RData")

@@ -22,7 +22,7 @@ sos_raw <- read.csv("data-raw/sos_2016-07-27.csv")
 sosid <- paste0("sos", 1:nrow(sos_raw))
 
 # Clean name by stripping any accidental whitespace from either end.
-sos_name <- strip_whitespace(sos_raw$name)
+name <- strip_whitespace(sos_raw$name)
 
 # Clean org_type column
 org_type <- clean_org_type(sos_raw$org_type)
@@ -37,12 +37,28 @@ date_created <- clean_date_created(sos_raw$date_created)
 date_terminated <- clean_date_terminated(sos_raw$date_terminated)
 
 # Clean syndromic, humans, animals, and plants columns.
-syndromic <- clean_yes_no_neia(sos_raw$syndromic)
 humans <- clean_yes_no_neia(sos_raw$humans)
 animals <- clean_yes_no_neia(sos_raw$animals)
 plants <- clean_yes_no_neia(sos_raw$plants)
+syndromic <- clean_yes_no_neia(sos_raw$syndromic)
+
+sos_cleaned <- data.frame(sosid, name, org_type, status, date_created, date_terminated, humans, animals, plants, syndromic)
 
 
 ###########################
 # Cleaning Country Column #
 ###########################
+
+sos_countries <- sos_raw$countries %>%
+  clean_countries() %>%
+  data.frame(sosid, .)
+
+
+#####################
+# Saving Everything #
+#####################
+
+write.csv(sos_cleaned, file = "data-raw/sos_cleaned.csv", row.names = FALSE)
+save(sos_cleaned, file = "data/sos_cleaned.RData")
+write.csv(sos_countries, file = "data-raw/sos_countries.csv", row.names = FALSE)
+save(sos_countries, file = "data/sos_countries.RData")

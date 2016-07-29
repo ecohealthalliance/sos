@@ -1,17 +1,15 @@
-load_all()
-
+library(devtools)
 library(plyr); library(dplyr)
 library(magrittr)
-library(R.utils)
 
 options(stringsAsFactors = FALSE)
 
 # Make the current environment aware of the raw data directory. Source all
 # scripts in the column cleaning workflow to load various
+load_all()
 rawdatadir <- system.file("data-raw", package = "sos")
-sourceDirectory(file.path(rawdatadir, "column_cleaning_workflows"), verbose = TRUE)
 
-sos_raw <- read.csv("data-raw/sos_2016-07-27.csv")
+sos_raw <- read.csv(file.path(rawdatadir, "sos_2016-07-27.csv"))
 
 
 #########################################
@@ -30,9 +28,10 @@ org_type <- clean_org_type(sos_raw$org_type)
 # Clean status column
 status <- clean_status(sos_raw$status)
 
-# Clean dates. Different functions for date_terminated and date_created, because for
-# date_terminated, if the date is the year of the dataset's collection or "c", we
-# replace it with the current year. Note: date_terminated is returned as a data.frame
+# Clean dates. Different functions for date_terminated and date_created,
+# because for date_terminated, if the date is the year of the dataset's
+# collection or "c", we replace it with the current year. Note:
+# date_terminated is returned as a data.frame
 date_created <- clean_date_created(sos_raw$date_created)
 date_terminated <- clean_date_terminated(sos_raw$date_terminated)
 
@@ -48,6 +47,9 @@ sos_cleaned <- data.frame(sosid, name, org_type, status, date_created, date_term
 ###########################
 # Cleaning Country Column #
 ###########################
+
+# First, we import the FAOCountryCodes.csv file.
+country_codes <- import_country_codes(file.path(rawdatadir, "FAOCountryCodes.csv"))
 
 sos_countries <- sos_raw$countries %>%
   clean_countries() %>%

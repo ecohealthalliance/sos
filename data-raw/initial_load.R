@@ -10,6 +10,7 @@ load_all()
 rawdatadir <- system.file("data-raw", package = "sos")
 
 sos_raw <- read.csv(file.path(rawdatadir, "sos_2016-07-27.csv"))
+save(sos_raw, file = "data/sos_raw.RData")
 
 
 #########################################

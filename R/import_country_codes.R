@@ -1,4 +1,4 @@
-import_country_codes <- function(csv_file = "inst/rawdata/FAOCountryCodes.csv") {
+import_country_codes <- function(csv_file = "data-raw/FAOCountryCodes.csv") {
   data_path <- system.file("data", package = "sos")
   country_codes = read.csv(csv_file, stringsAsFactors = FALSE)
   names(country_codes) <- c("shortname",

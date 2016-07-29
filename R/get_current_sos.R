@@ -4,11 +4,11 @@ get_current_sos <- function(save_RData = TRUE, assign = FALSE) {
   sos_url <- "https://docs.google.com/spreadsheets/d/12KBoYMgqCc14WlE0JYyZLbo907f2SBPlEGgajF2j7GI/pub?gid=0&single=true&output=csv"
   date_str <- format(Sys.time(), "%Y-%m-%d-%H%M%S")
   sos_versions_path <- system.file("inst/sos_versions", package = "sos")
-  rawdata_path <- system.file("inst/rawdata", package = "sos")
+  rawdata_path <- system.file("data-raw", package = "sos")
   data_path <- system.file("data", package = "sos")
   dest_name <- paste0("sos_", date_str, ".csv")
   dest_file <- file.path(sos_versions_path, dest_name)
-  latest_file <- file.path(rawdata_path, "sos_latest.csv")
+  latest_file <- file.path(rawdata_path, "sos_latest_google.csv")
 
   message("Downloading current Google Drive file to compare...\n")
   sos_temp <- tryCatch(curl_download(url = sos_url, destfile = tempfile()),
@@ -30,16 +30,16 @@ get_current_sos <- function(save_RData = TRUE, assign = FALSE) {
     file.copy(from = sos_temp, to = dest_file, overwrite = TRUE) 
   }
 
-  sos_raw <- read.csv(latest_file, stringsAsFactors = FALSE)
+  sos_raw_google <- read.csv(latest_file, stringsAsFactors = FALSE)
 
   if (save_RData == TRUE) {
-    message("Saving latest file as sos_raw.RData\n")
-    save(sos_raw, file = file.path(data_path, "sos_raw.RData"))
+    message("Saving latest file as sos_raw_google.RData\n")
+    save(sos_raw_google, file = file.path(data_path, "sos_raw_google.RData"))
   }
 
   if (assign == TRUE) {
-    message("Assigning latest file to sos_raw object.\n")
-    assign("sos_raw", sos_raw, envir = globalenv())
+    message("Assigning latest file to sos_raw_google object.\n")
+    assign("sos_raw_google", sos_raw_google, envir = globalenv())
   }
 }
 
